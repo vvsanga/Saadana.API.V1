@@ -1,0 +1,36 @@
+extension,type,description
+.docx,Microsoft Word Document,Default file format for Microsoft Word documents.
+.doc,Microsoft Word 97-2003 Document,"Older Word file format, used in earlier versions of Microsoft Word."
+.pdf,Portable Document Format,Widely used format for fixed-layout documents.
+.txt,Plain Text File,Simple text file containing unformatted text.
+.rtf,Rich Text Format,Text file that supports basic formatting such as bold and italics.
+.odt,OpenDocument Text,Open-source document format used by LibreOffice and OpenOffice.
+.xlsx,Microsoft Excel Workbook,Default file format for Microsoft Excel spreadsheets.
+.xls,Microsoft Excel 97-2003 Workbook,Older Excel file format for spreadsheets.
+.csv,Comma-Separated Values,"Plain text file with data separated by commas, used for tabular data."
+.ods,OpenDocument Spreadsheet,Spreadsheet file format used by LibreOffice and OpenOffice.
+.pptx,Microsoft PowerPoint Presentation,Default file format for Microsoft PowerPoint presentations.
+.ppt,Microsoft PowerPoint 97-2003 Presentation,Older PowerPoint file format.
+.odp,OpenDocument Presentation,Presentation file format used by LibreOffice and OpenOffice.
+.jpg,JPEG Image,Commonly used compressed image format.
+.png,Portable Network Graphics,Lossless image format supporting transparency.
+.gif,Graphics Interchange Format,Image format supporting simple animations.
+.bmp,Bitmap Image,Uncompressed raster image format.
+.tiff,Tagged Image File Format,High-quality image format often used in publishing.
+.svg,Scalable Vector Graphics,Vector image format that can scale without losing quality.
+.mp3,MPEG Audio Layer-3,Popular compressed audio file format.
+.wav,Waveform Audio File,Uncompressed audio format with high quality.
+.aac,Advanced Audio Coding,Compressed audio format widely used in streaming and devices.
+.flac,Free Lossless Audio Codec,Lossless audio format for high-quality music.
+.mp4,MPEG-4 Video,Common video format for streaming and sharing.
+.avi,Audio Video Interleave,Older video file format developed by Microsoft.
+.mkv,Matroska Video File,Flexible video format supporting multiple audio and subtitle tracks.
+.mov,Apple QuickTime Movie,Video file format developed by Apple.
+.wmv,Windows Media Video,Microsoft video format optimized for Windows playback.
+.zip,ZIP Archive,Compressed file format used to package multiple files together.
+.rar,RAR Archive,"Compressed archive format, often smaller than ZIP."
+.7z,7-Zip Archive,High-compression archive format created by 7-Zip software.
+.iso,Disk Image File,Archive format that represents the contents of an optical disc.
+.exe,Windows Executable File,Program file that runs applications in Windows.
+.apk,Android Package,File format used to install applications on Android devices.
+.dmg,Apple Disk Image,Disk image file used to distribute software on macOS.

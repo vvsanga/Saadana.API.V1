@@ -1,0 +1,1 @@
+Your ##VAR_SENDER_NAME## OTP is ##VAR_OTP##. Valid for ##VAR_OTP_EXP_MINS## minutes. Do not share it.

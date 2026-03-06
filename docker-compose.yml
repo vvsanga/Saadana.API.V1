@@ -1,0 +1,57 @@
+services:
+  api:
+    image: vvsanga/saadana-api:latest
+    build: . 
+    container_name: saadana-api
+    restart: always
+    command: npm run start:prod
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./environments/.env.production 
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - saadana-net
+    environment:
+      - NODE_ENV=production
+      - DB_HOST=dpg-d6e3ih0gjchc738fm71g-a.oregon-postgres.render.com
+      - DB_PORT=5432
+      - DB_USER=saadana_db_user
+      - DB_PASS=uvtesMiiayQBMLnbFrB30lF7EmKTZfnl
+      - DB_NAME=saadana_db_iv4v
+      - JWT_ACCESS_SECRET=your_access_secret_here
+      - JWT_ACCESS_TTL_MINS=15
+      - JWT_REFRESH_SECRET=your_refresh_secret_here
+      - JWT_REFRESH_TTL_DAYS=7
+      - ALLOWED_ORIGINS=https://saadana-app.onrender.com,http://localhost:8100
+      - APP_PORT=3000
+
+networks:
+  saadana-net:
+    driver: bridge
+
+# services:
+#   api:
+#     image: vvsanga/saadana-api:latest
+#     container_name: saadana-api
+#     restart: always
+#     # While testing WITHOUT Traefik, keep ports enabled:
+#     ports:
+#       - "3000:3000"
+#     env_file:
+#       - .env.prod
+#     healthcheck:
+#       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+#       interval: 30s
+#       timeout: 10s
+#       retries: 3
+#     networks:
+#       - saadana-net
+
+# networks:
+#   saadana-net:
+#     driver: bridge

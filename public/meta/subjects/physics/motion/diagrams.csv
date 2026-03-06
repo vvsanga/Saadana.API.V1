@@ -1,0 +1,8 @@
+media,title,url
+S, "Uniform Motion", "physics/motions/motion-uniform.svg"
+S, "Non Uniform Motion", "physics/motions/motion-non-uniform.svg"
+S, "Circular Motion", "physics/motions/motion-circular.svg"
+S, "Periodic Motion", "physics/motions/motion-periodic.svg"
+I, "Translational Motion", "physics/motions/motion-translational.png"
+I, "Rotational Motion", "physics/motions/motion-rotational.png"
+I, "Rectilinear Motion", "physics/motions/motion-rectilinear.png"

@@ -1,0 +1,12 @@
+id,comparison_id,orderRow,orderCol,content
+501,401,1,1,"Speed is a scalar quantity"
+502,401,1,2,"Velocity is a vector quantity"
+
+503,401,2,1,"Speed depends on distance travelled"
+504,401,2,2,"Velocity depends on displacement"
+
+505,401,3,1,"Speed is always positive"
+506,401,3,2,"Velocity can be positive, negative or zero"
+
+507,401,4,1,"Speed gives no information about direction"
+508,401,4,2,"Velocity gives information about direction"

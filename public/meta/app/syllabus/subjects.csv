@@ -1,0 +1,13 @@
+code,label,description,gradeFrom,gradeTo,order,avatar
+A,ENVIRONMENTS,Study of environment ecology sustainability and humanâ€“nature interaction,1,10,11,rainy-outline.svg
+B,BIOLOGY,Study of living organisms life processes and biological systems,6,10,6,fitness-outline.svg
+C,CHEMISTRY,Study of substances materials chemical reactions and properties of matter,6,10,5,flask-outline.svg
+E,ENGLISH,Study of grammar rules sentence structure and language usage,1,10,2,text-outline.svg
+G,GEOGRAPHY,Study of earth physical features climate resources and human interaction,6,10,8,earth-outline.svg
+H,HISTORY,Study of past events civilizations cultures and historical change,6,10,7,search-outline.svg
+K,COMPUTERS,Study of computers digital systems programming and computational thinking,1,10,3,laptop-outline.svg
+M,MATHS,Study of numbers operations patterns shapes and logical reasoning,1,10,1,calculator-outline.svg
+N,ECONOMICS,Study of production distribution consumption and economic systems,6,10,10,stats-chart-outline.svg
+P,PHYSICS,Study of matter energy force motion and physical laws,6,10,4,magnet-outline.svg
+R,GENERAL,Study of General knowledge,1,10,12,hourglass-outline.svg
+V,CIVICS,Study of political systems governance rights duties and citizenship,6,10,9,people-outline.svg

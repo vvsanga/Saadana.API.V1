@@ -1,0 +1,149 @@
+parent,code,label,description,gradeFrom,gradeTo,order
+A,A-MEF,Myself and Family,"Understanding self, family and relationships",1,2,1
+A,A-BDY,Human Body,"Body parts, senses and health",1,3,2
+A,A-FOD,Food and Nutrition,"Food habits, nutrients and health",1,4,3
+A,A-PLA,Plants and Trees,"Plant life, parts and importance",1,4,4
+A,A-ANI,Animals,"Animal types, habitats and care",1,4,5
+A,A-HOM,Houses and Shelter,Houses types and materials,1,3,6
+A,A-WAT,Water,"Uses, sources and conservation of water",2,5,7
+A,A-AIR,Air,"Air importance, pollution and protection",2,5,8
+A,A-EAR,Earth and Soil,"Earth, soil types and uses",2,5,9
+A,A-WEA,Weather and Seasons,Weather changes and seasons,2,4,10
+A,A-TRA,Transport and Communication,Means of transport and communication,2,4,11
+A,A-WRK,Work and Occupations,Jobs and occupations in society,2,4,12
+A,A-NEI,Neighbourhood and Community,Community helpers and services,2,4,13
+A,A-SAF,Safety and First Aid,Personal safety and basic first aid,3,5,14
+A,A-ENV,Environment and Pollution,Environmental protection and pollution,3,5,15
+A,A-RES,Natural Resources,Resources types and conservation,3,5,16
+A,A-CLI,Climate and Disasters,Climate awareness and natural disasters,4,6,17
+A,A-CIV,Civic Sense and Responsibility,"Rules, responsibilities and good habits",1,5,18
+A,A-POL,Pollution,"Types of pollution, causes, effects and prevention",6,10,19
+A,A-CNS,Conservation,"Conservation of resources, forests, water and wildlife",6,10,20
+A,A-CLM,Climate & Weather,"Weather phenomena, climate zones and global climate change",6,10,21
+A,A-HUM,Human Impact,"Human activities, sustainable development and environmental ethics",7,10,22
+B,B-CEL,Cells,"Study of cell structure, organelles, and functions",6,7,1
+B,B-TIS,Tissues,"Plant and animal tissues, structure and function",6,8,2
+B,B-ORG,Organs & Systems,Human organ systems and their functions,7,10,3
+B,B-PLT,Plant Biology,"Structure, reproduction, and growth of plants",6,9,4
+B,B-ANI,Animal Biology,"Classification, characteristics and reproduction of animals",6,9,5
+B,B-ECO,Ecology,"Ecosystems, interactions, food chains and webs",7,10,6
+B,B-HUM,Human Health,"Nutrition, diseases, hygiene, and first aid",7,10,7
+B,B-GEN,Genetics,"Inheritance, traits, DNA basics and heredity",8,10,8
+C,C-MAT,Matter,"States of matter, properties, classification and changes",6,7,1
+C,C-ATM,Atoms & Molecules,"Structure of atoms, molecules, elements, compounds",6,8,2
+C,C-STR,Structure of Matter,"Particles, atomic theory, chemical formulas",6,9,3
+C,C-REA,Chemical Reactions,"Types of reactions, balancing equations",7,10,4
+C,C-ACD,Acids & Bases,"Properties, indicators and reactions of acids and bases",7,10,5
+C,C-SOL,Solutions,"Solubility, concentration, types of solutions",7,10,6
+C,C-MET,Metals & Nonmetals,"Properties, uses, reactions, corrosion",7,10,7
+C,C-ORG,Organic Chemistry,Introduction to carbon compounds and hydrocarbons,8,10,8
+C,C-ENE,Energy in Chemistry,"Exothermic, endothermic reactions, energy changes",8,10,9
+E,E-ALN,Alphabet and Letters,"Understanding alphabet letters, vowels, consonants",1,2,1
+E,E-WRD,Words,"Forming and recognizing words, spelling rules",1,3,2
+E,E-SEN,Sentences,"Sentence formation, types of sentences",1,4,3
+E,E-PUN,Punctuation,Using punctuation marks correctly,2,5,4
+E,E-TNS,Tenses,Understanding and applying tenses,3,7,5
+E,E-PRN,Pronouns,Usage of pronouns and their types,3,6,6
+E,E-ADJ,Adjectives,Identifying and using adjectives,3,6,7
+E,E-ADV,Adverbs,Identifying and using adverbs,4,7,8
+E,E-VRB,Verbs,Identifying and using verbs,3,7,9
+E,E-SUB,Subject-Verb Agreement,Agreement rules between subject and verb,4,8,10
+E,E-ART,Articles,"Usage of a, an, the",3,6,11
+E,E-PRE,Prepositions,Usage and types of prepositions,4,7,12
+E,E-CON,Conjunctions,Connecting words and sentences,4,7,13
+E,E-INT,Interjections,Usage of interjections in sentences,5,8,14
+E,E-PRP,Pronunciation and Phonics,Sound of letters and correct pronunciation,1,5,15
+E,E-WDC,Word Classes,"Nouns, verbs, adjectives, adverbs classification",4,8,16
+E,E-SYN,Synonyms and Antonyms,Identifying synonyms and antonyms,5,9,17
+E,E-PHR,Phrases,Understanding and using phrases,6,9,18
+E,E-CNV,Conventions,"Capitalization, spelling, common errors",3,8,19
+G,G-PHY,Physical Geography,"Study of earth's physical features, landforms, climate and soils",6,10,1
+G,G-HUM,Human Geography,"Population, settlements, migration, culture and resources",6,10,2
+G,G-REG,Regional Geography,"Study of continents, countries, and regions",6,10,3
+G,G-RES,Resources,"Types of natural resources, distribution and management",7,10,4
+G,G-ENV,Environment & Ecology,Interaction of humans with environment and ecosystems,7,10,5
+G,G-CLM,Climatology,"Weather, climate zones, atmospheric phenomena",6,10,6
+H,H-ANC,Ancient Civilizations,Study of early human societies and civilizations,6,7,1
+H,H-MED,Medieval History,"Study of medieval kingdoms, culture and society",7,8,2
+H,H-MOD,Modern History,Events from the 18th century to independence,8,10,3
+H,H-FRE,Freedom Struggle,"Indian freedom movement, leaders and major events",8,10,4
+H,H-WAR,World Wars,"Causes, major events and outcomes of World Wars",9,10,5
+H,H-REV,Revolutions,Important revolutions globally and in India,9,10,6
+H,H-CUL,Culture & Heritage,"Cultural, social and heritage aspects of history",6,10,7
+K,K-BAS,Basics of Computers,"Introduction to computers, types, components and usage",1,3,1
+K,K-OPS,Operating Systems,"Understanding OS functions, GUI, and file management",3,6,2
+K,K-WDP,Word Processing,"Creating, editing and formatting documents",3,7,3
+K,K-SSS,Spreadsheets,"Understanding spreadsheets, formulas and charts",4,8,4
+K,K-PRE,Presentations,"Creating slides, adding media, formatting slides",4,8,5
+K,K-PRG,Programming Concepts,Introduction to programming logic and simple programs,5,10,6
+K,K-DBS,Databases,"Introduction to databases, tables, queries and basic operations",6,10,7
+K,K-NET,Networking Basics,"Understanding networks, internet, and communication protocols",6,10,8
+K,K-SEC,Cyber Security,"Basics of digital safety, passwords, and threats",6,10,9
+K,K-ALG,Algorithms & Logic,Problem-solving using flowcharts and basic algorithms,5,10,10
+M,M-NUM,Number System,"Counting numbers, place value and types",1,5,1
+M,M-OPS,Operations on Numbers,"Addition, subtraction, multiplication, division",1,5,2
+M,M-FRA,Fractions,Understanding and operating on fractions,3,6,3
+M,M-DEC,Decimals,Decimal numbers and their operations,4,6,4
+M,M-PER,Percentages,Percentage concepts and calculations,5,7,5
+M,M-RAT,Ratios and Proportion,Understanding ratios and proportions,6,8,6
+M,M-ALG,Algebra,Variables and algebraic expressions,6,8,7
+M,M-LIN,Linear Equations,Solving linear equations in one variable,7,9,8
+M,M-POL,Polynomials,Polynomial identification and operations,8,10,9
+M,M-GEO,Geometric Shapes,Properties and identification of 2D shapes,1,5,10
+M,M-ANG,Angles and Lines,Types of angles and relationships,5,8,11
+M,M-TRI,Triangles,"Triangle types, properties, congruence and similarity",6,9,12
+M,M-QUA,Quadrilaterals,Properties and classification of quadrilaterals,6,8,13
+M,M-CIR,Circles,"Parts, properties and applications of circles",7,10,14
+M,M-CON,Constructions,Geometrical constructions,6,9,15
+M,M-MEN,Mensuration,"Perimeter, area and volume calculations",4,10,16
+M,M-COO,Coordinate Geometry,Plotting points and basic calculations on plane,8,10,17
+M,M-DAT,Data Handling,"Collecting, representing and interpreting data",3,8,18
+M,M-STA,Statistics,"Mean, median, mode and graphical representation",8,10,19
+M,M-PRO,Probability,Simple probability calculations and concepts,8,10,20
+N,N-PRI,Production,"Concepts of production, factors of production and types",6,8,1
+N,N-COS,Consumption,"Consumption patterns, needs, wants and utility",6,8,2
+N,N-MKT,Markets,"Types of markets, demand, supply and pricing",7,10,3
+N,N-MON,Money & Banking,"Role of money, banking system and financial institutions",7,10,4
+N,N-DEV,Economic Development,"Economic growth, development indicators and challenges",8,10,5
+P,P-MOT,Motion,"Study of motion of objects, distance, displacement and speed",6,7,1
+P,P-FOR,Force,"Concepts of force, types and effects on motion",6,8,2
+P,P-ENE,Energy,"Different forms of energy, conservation and work",6,9,3
+P,P-WRK,Work,"Work done by force, formula and examples",6,8,4
+P,P-POW,Power,"Rate of doing work, calculations and units",7,9,5
+P,P-PRE,Pressure,"Pressure in liquids, gases and solids",6,8,6
+P,P-FLU,Fluids,"Properties of liquids and gases, buoyancy and Archimedes' principle",7,9,7
+P,P-THE,Thermal Physics,"Heat, temperature, conduction, convection and radiation",6,10,8
+P,P-SOU,Sound,"Production, propagation, characteristics of sound",6,9,9
+P,P-LIG,Light,"Reflection, refraction, lenses, human eye and optical instruments",7,10,10
+P,P-ELE,Electricity,"Current, voltage, resistance, Ohm's law, series and parallel circuits",7,10,11
+P,P-MAG,Magnetism,"Magnetic fields, poles, Earth magnetism, electromagnets",7,10,12
+P,P-WAV,Waves,"Mechanical waves, wave properties, frequency, wavelength and amplitude",6,9,13
+P,P-PRJ,Projectiles,"Projectile motion, horizontal and vertical components",8,10,14
+R,R-CUR,Current Affairs,"Events, news, and recent developments nationally and globally",6,10,1
+R,R-SCI,Science & Tech,"Basic science and technology facts, innovations and discoveries",6,10,2
+R,R-HIS,History Facts,"Historical events, personalities and timelines",6,10,3
+R,R-GEO,Geography Facts,"Geography knowledge, capitals, countries, rivers, mountains",6,10,4
+R,R-LOG,Logical Reasoning,"Puzzles, patterns, reasoning and problem solving",6,10,5
+R,R-CUL,Culture & Arts,"Cultural knowledge, festivals, art forms, music and literature",6,10,6
+R,R-SPT,Sports & Games,"Sports rules, tournaments, famous players and records",6,10,7
+R,R-MED,Medicine & Health,"Medical discoveries, vaccines, hygiene, and health facts",6,10,8
+R,R-ENV,Environment & Ecology,"Environmental awareness, conservation, sustainability",7,10,9
+R,R-TRV,Travel & World Culture,"Countries, capitals, landmarks, and tourism facts",6,10,10
+R,R-ENT,Entertainment & Media,"Movies, music, media, television, and popular culture",6,10,11
+R,R-TEC,Technology & Innovation,"Modern tech, AI, robotics, space, gadgets",7,10,12
+R,R-LAW,Laws & Governance,"Important laws, rights, judiciary, and governance knowledge",7,10,13
+R,R-MAT,Fun Math & Puzzles,"Brain teasers, math tricks, numerical puzzles, logical games",6,10,14
+R,R-EXP,Science Experiments,"Simple experiments, demonstrations, and practical science knowledge",6,10,15
+R,R-CHN,Emerging Technologies,"AI, robotics, space tech, renewable energy, nanotech",7,10,16
+R,R-MAN,Human Achievements,"Great inventions, notable personalities, historical achievements",6,10,17
+R,R-LTR,World Culture,"Traditions, cuisines, festivals, languages around the world",6,10,18
+R,R-MIN,Brain & Mind,"Logical brain teasers, memory exercises, puzzles, riddles",6,10,19
+R,R-WLD,World Facts,"Unique global facts: countries, oceans, records, geography curiosities",6,10,20
+R,R-PLA,Space & Planets,"Solar system, planets, stars, universe facts",6,10,21
+R,R-ENX,Environmental Experiments,"Simple ecology, conservation, climate experiments",7,10,22
+V,V-DEM,Democracy,"Study of democracy, its principles, types and importance",6,10,1
+V,V-CNS,Constitution,"Understanding constitution, fundamental rights and duties",6,10,2
+V,V-GOV,Governance,Structure and functions of government at various levels,6,10,3
+V,V-PRI,Political Parties,"Role, types, and functioning of political parties",7,10,4
+V,V-ELE,Elections,"Electoral process, voting and election systems",7,10,5
+V,V-CIT,Citizenship,"Rights, responsibilities and participation of citizens",6,10,6

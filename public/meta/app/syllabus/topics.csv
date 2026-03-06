@@ -1,0 +1,459 @@
+parent,code,label,description,gradeFrom,gradeTo,order
+A-AIR,A-AIR-IMP,Importance of Air,Understand why air is needed for life,2,3,1
+A-AIR,A-AIR-POL,Air Pollution,Identify causes and effects of air pollution,3,4,2
+A-AIR,A-AIR-PRO,Air Protection,Ways to keep air clean,4,5,3
+A-ANI,A-ANI-TYP,Animal Types,"Classify animals as domestic/wild, vertebrates/invertebrates",1,2,1
+A-ANI,A-ANI-HAB,Animal Habitats,Identify where animals live,2,3,2
+A-ANI,A-ANI-CAR,Animal Care,Learn how to care for pets and farm animals,3,4,3
+A-BDY,A-BDY-PAR,Body Parts,Identify and name body parts,1,2,1
+A-BDY,A-BDY-SEN,Senses,Understand five senses and organs,1,3,2
+A-BDY,A-BDY-HEA,Health Habits,Learn basic hygiene and healthy habits,2,3,3
+A-CIV,A-CIV-RUL,Rules,"Understand rules at home, school and community",1,3,1
+A-CIV,A-CIV-RSP,Responsibilities,Learn duties towards family and society,2,4,2
+A-CIV,A-CIV-HAB,Good Habits,"Understand civic good habits like cleanliness, punctuality",2,5,3
+A-CLI,A-CLI-CLM,Climate Awareness,Understand basic climate and seasonal changes,4,5,1
+A-CLI,A-CLI-DIS,Natural Disasters,"Learn about floods, earthquakes, storms",4,6,2
+A-CLM,A-CLM-WTH,Weather Elements,"Study temperature, pressure, humidity, wind and rainfall",6,7,1
+A-CLM,A-CLM-CLM,Climate Zones,Identify different climate zones and characteristics,7,9,2
+A-CLM,A-CLM-GCC,Global Climate Change,Understand causes and impacts of climate change,8,10,3
+A-CNS,A-CNS-FOR,Forest Conservation,Understand importance of forests and conservation methods,6,8,1
+A-CNS,A-CNS-WTR,Water Conservation,Methods to conserve and manage water resources,6,9,2
+A-CNS,A-CNS-WLD,Wildlife Conservation,Protect endangered species and habitats,7,10,3
+A-EAR,A-EAR-STR,Earth Structure,"Understand soil, rocks and layers of earth",2,3,1
+A-EAR,A-EAR-TYP,Soil Types,Identify types of soil,3,4,2
+A-EAR,A-EAR-USE,Soil Uses,Learn uses of soil for farming and plants,4,5,3
+A-ENV,A-ENV-PRO,Environmental Protection,Learn ways to protect environment,3,4,1
+A-ENV,A-ENV-POL,Pollution Control,"Understand air, water and soil pollution control",3,5,2
+A-FOD,A-FOD-TYP,Food Types,Identify different types of food,1,2,1
+A-FOD,A-FOD-NUT,Nutrients,Understand nutrients and their benefits,2,3,2
+A-FOD,A-FOD-HAB,Healthy Habits,Practice good eating habits,3,4,3
+A-HOM,A-HOM-TYP,House Types,Identify different types of houses,1,2,1
+A-HOM,A-HOM-MAT,Building Materials,Learn common materials used in houses,2,3,2
+A-HUM,A-HUM-IND,Industrial Impact,Study environmental effects of industries and urbanization,7,10,1
+A-HUM,A-HUM-AGR,Agricultural Impact,Understand effects of agriculture on environment,7,10,2
+A-HUM,A-HUM-SUS,Sustainable Practices,Learn practices for sustainable living,7,10,3
+A-HUM,A-HUM-ETH,Environmental Ethics,Develop awareness and responsibility towards environment,7,10,4
+A-MEF,A-MEF-FAM,Family Members,Identify family members and their roles,1,2,1
+A-MEF,A-MEF-SLF,About Myself,"Understand own body, name, age and feelings",1,2,2
+A-MEF,A-MEF-REL,Family Relationships,Describe relationships between family members,1,2,3
+A-NEI,A-NEI-HEL,Community Helpers,"Identify helpers like teachers, doctors, policemen",2,3,1
+A-NEI,A-NEI-SER,Community Services,Understand services provided by community members,2,4,2
+A-PLA,A-PLA-PAR,Plant Parts,"Identify roots, stem, leaves, flowers",1,2,1
+A-PLA,A-PLA-GRO,Plant Growth,Observe growth of plants from seeds,2,3,2
+A-PLA,A-PLA-IMP,Importance of Plants,Understand role of plants in environment and food,3,4,3
+A-POL,A-POL-AIR,Air Pollution,"Identify sources, effects and prevention of air pollution",6,8,1
+A-POL,A-POL-WTR,Water Pollution,Understand water pollution and control measures,6,9,2
+A-POL,A-POL-SLD,Solid Waste,Study types and management of solid waste,7,10,3
+A-POL,A-POL-NSE,Noise Pollution,Understand causes and prevention of noise pollution,7,10,4
+A-RES,A-RES-NAT,Natural Resources,"Identify water, soil, plants and minerals as resources",3,4,1
+A-RES,A-RES-CNS,Resource Conservation,Learn ways to conserve natural resources,3,5,2
+A-SAF,A-SAF-PER,Personal Safety,Learn rules for safety at home and school,3,4,1
+A-SAF,A-SAF-FAD,First Aid,Learn basic first aid for minor injuries,3,5,2
+A-TRA,A-TRA-MNS,Means of Transport,Identify different modes of transport,2,3,1
+A-TRA,A-TRA-COM,Communication,Understand ways people communicate,2,4,2
+A-WAT,A-WAT-USE,Uses of Water,Identify uses of water at home and school,2,3,1
+A-WAT,A-WAT-SRC,Water Sources,Identify sources of water like rivers and wells,2,4,2
+A-WAT,A-WAT-CNS,Water Conservation,Learn ways to save water,3,5,3
+A-WEA,A-WEA-SEA,Seasons,Identify seasons and their features,2,3,1
+A-WEA,A-WEA-WTH,Weather Changes,Observe daily weather changes,2,4,2
+A-WRK,A-WRK-JOB,Jobs,Identify different types of jobs,2,3,1
+A-WRK,A-WRK-OCC,Occupations,Understand roles in society,2,4,2
+B-ANI,B-ANI-CLF,Animal Classification,Classify animals based on phylum and characteristics,6,8,1
+B-ANI,B-ANI-REP,Animal Reproduction,Reproduction methods in animals,7,9,2
+B-ANI,B-ANI-FUN,Animal Functions,"Understand feeding, locomotion and other functions",7,9,3
+B-CEL,B-CEL-IDN,Identify Cell Parts,"Recognize nucleus, cytoplasm, membrane and other organelles",6,7,1
+B-CEL,B-CEL-FUN,Cell Functions,Describe functions of different cell organelles,6,7,2
+B-CEL,B-CEL-CMP,Compare Cells,Compare plant and animal cells,7,7,3
+B-ECO,B-ECO-INT,Ecosystem Interactions,"Understand producers, consumers and decomposers",7,8,1
+B-ECO,B-ECO-FCH,Food Chains,Draw and explain food chains,7,9,2
+B-ECO,B-ECO-FWB,Food Webs,Draw and interpret food webs,8,10,3
+B-GEN,B-GEN-TRA,Traits,Understand inherited and acquired traits,8,9,1
+B-GEN,B-GEN-DNA,DNA Basics,Structure and function of DNA,8,10,2
+B-GEN,B-GEN-HER,Heredity,Introduction to inheritance and simple Mendelian rules,9,10,3
+B-HUM,B-HUM-NUT,Nutrition,"Study nutrients, balanced diet and digestion",7,8,1
+B-HUM,B-HUM-DIS,Diseases,"Identify common diseases, causes and prevention",7,9,2
+B-HUM,B-HUM-HYG,Hygiene,Maintain personal and environmental hygiene,7,10,3
+B-HUM,B-HUM-FAD,First Aid,Basic first aid for minor injuries,8,10,4
+B-ORG,B-ORG-CIR,Circulatory System,"Understand heart, blood vessels, and blood",7,9,1
+B-ORG,B-ORG-DIG,Digestive System,Understand structure and function of digestive organs,7,9,2
+B-ORG,B-ORG-RES,Respiratory System,"Understand lungs, breathing and oxygen exchange",7,9,3
+B-ORG,B-ORG-EXC,Excretory System,Understand kidney and excretion process,7,10,4
+B-ORG,B-ORG-NSY,Nervous System,"Structure and function of brain, spinal cord, nerves",8,10,5
+B-PLT,B-PLT-STR,Plant Structure,"Roots, stem, leaves and their functions",6,7,1
+B-PLT,B-PLT-REP,Plant Reproduction,Sexual and asexual reproduction in plants,7,9,2
+B-PLT,B-PLT-GRO,Plant Growth,Factors affecting plant growth,7,9,3
+B-TIS,B-TIS-PLT,Plant Tissues,"Identify parenchyma, collenchyma, sclerenchyma",6,8,1
+B-TIS,B-TIS-ANI,Animal Tissues,"Identify epithelial, muscular, connective and nervous tissues",6,8,2
+C-ACD,C-ACD-IDN,Identify Acids & Bases,Recognize common acids and bases,7,8,1
+C-ACD,C-ACD-PRO,Properties,"Test pH, taste, and reactions of acids/bases",7,9,2
+C-ACD,C-ACD-NEU,Neutralization,Perform neutralization reactions,8,10,3
+C-ATM,C-ATM-IDN,Identify Atoms,Understand basic atomic structure,6,7,1
+C-ATM,C-ATM-SYM,Atomic Symbols,Write symbols for elements,6,8,2
+C-ATM,C-ATM-MOL,Molecules,Identify molecules and chemical formulas,7,8,3
+C-ENE,C-ENE-EXO,Exothermic Reactions,Identify reactions that release heat,8,10,1
+C-ENE,C-ENE-END,Endothermic Reactions,Identify reactions that absorb heat,8,10,2
+C-MAT,C-MAT-IDN,Identify States of Matter,"Identify solids, liquids and gases",6,7,1
+C-MAT,C-MAT-PRP,Properties of Matter,Observe and describe physical properties,6,7,2
+C-MAT,C-MAT-CLF,Classify Matter,"Classify matter as elements, compounds or mixtures",6,7,3
+C-MAT,C-MAT-CHG,Change of State,"Describe melting, freezing, evaporation, condensation",6,7,4
+C-MET,C-MET-IDN,Identify Metals & Nonmetals,Recognize metals and nonmetals,7,8,1
+C-MET,C-MET-REA,Reaction with Acid,Observe reactions with acids,7,9,2
+C-MET,C-MET-COR,Corrosion,Understand and prevent corrosion,8,10,3
+C-ORG,C-ORG-IDN,Carbon Compounds,Identify simple carbon compounds,8,9,1
+C-ORG,C-ORG-HYD,Hydrocarbons,"Classify alkanes, alkenes and alkynes",8,10,2
+C-REA,C-REA-IDN,Identify Reactions,Classify reactions into types,7,8,1
+C-REA,C-REA-BAL,Balance Equations,Balance simple chemical equations,7,9,2
+C-REA,C-REA-OBS,Observation of Reactions,Observe physical and chemical changes,8,10,3
+C-SOL,C-SOL-IDN,Types of Solutions,"Identify solid, liquid and gaseous solutions",7,8,1
+C-SOL,C-SOL-SOL,Solubility,Determine solubility of substances in solvents,7,9,2
+C-SOL,C-SOL-CON,Concentration,Calculate concentration of solutions,8,10,3
+C-STR,C-STR-PTC,Particles in Matter,Understand particle model of matter,6,7,1
+C-STR,C-STR-ATM,Atomic Theory,Explain basic atomic theory,7,8,2
+C-STR,C-STR-FML,Chemical Formulas,Write and interpret chemical formulas,8,9,3
+E-ADJ,E-ADJ-IDF,Identify Adjectives,Recognize adjectives in sentences,3,5,1
+E-ADJ,E-ADJ-USE,Use Adjectives,Use adjectives correctly in sentences,4,6,2
+E-ADV,E-ADV-IDF,Identify Adverbs,Recognize adverbs in sentences,4,6,1
+E-ADV,E-ADV-USE,Use Adverbs,Use adverbs correctly in sentences,5,7,2
+E-ALN,E-ALN-IDV,Identify Letters,Identify letters of the alphabet,1,1,1
+E-ALN,E-ALN-VWL,Vowels,Recognize vowels in words,1,2,2
+E-ALN,E-ALN-CNS,Consonants,Recognize consonants in words,1,2,3
+E-ART,E-ART-IDF,Identify Articles,"Recognize articles a, an, the",3,5,1
+E-ART,E-ART-USE,Use Articles,Use articles correctly in sentences,4,6,2
+E-CNV,E-CNV-IDF,Conventions,"Capitalization, spelling, and common writing rules",3,6,1
+E-CNV,E-CNV-ERR,Correct Errors,Correct common grammar errors,4,8,2
+E-CON,E-CON-IDF,Identify Conjunctions,Recognize conjunctions in sentences,4,6,1
+E-CON,E-CON-USE,Use Conjunctions,Use conjunctions correctly to join words or sentences,5,7,2
+E-INT,E-INT-IDF,Identify Interjections,Recognize interjections in sentences,5,7,1
+E-INT,E-INT-USE,Use Interjections,Use interjections correctly in sentences,6,8,2
+E-PHR,E-PHR-IDF,Identify Phrases,Recognize phrases in sentences,6,8,1
+E-PHR,E-PHR-USE,Use Phrases,Use phrases correctly in sentences,7,9,2
+E-PRE,E-PRE-IDF,Identify Prepositions,Recognize prepositions in sentences,4,6,1
+E-PRE,E-PRE-USE,Use Prepositions,Use prepositions correctly in sentences,5,7,2
+E-PRN,E-PRN-PER,Personal Pronouns,Identify and use personal pronouns,3,5,1
+E-PRN,E-PRN-POS,Possessive Pronouns,Identify and use possessive pronouns,4,6,2
+E-PRN,E-PRN-DEM,Demonstrative Pronouns,Identify and use demonstrative pronouns,4,6,3
+E-PRP,E-PRP-PHN,Phonics,Understand sounds of letters,1,3,1
+E-PRP,E-PRP-PRN,Pronunciation,Pronounce words correctly,2,5,2
+E-PUN,E-PUN-COM,Comma Usage,Use commas correctly,2,5,1
+E-PUN,E-PUN-FUL,Full Stop Usage,Use full stops correctly,2,5,2
+E-PUN,E-PUN-QST,Question Mark Usage,Use question marks correctly,3,5,3
+E-SEN,E-SEN-FRM,Form Sentences,Make correct sentences,2,4,1
+E-SEN,E-SEN-TYP,Sentence Types,"Identify declarative, interrogative, exclamatory sentences",2,4,2
+E-SUB,E-SUB-AGR,Subject-Verb Agreement,Ensure subject and verb agree in sentences,4,6,1
+E-SUB,E-SUB-ADA,Advanced Agreement,Apply subject-verb agreement with complex subjects,6,8,2
+E-SYN,E-SYN-SYN,Synonyms,Identify synonyms for words,5,8,1
+E-SYN,E-SYN-ANT,Antonyms,Identify antonyms for words,5,9,2
+E-TNS,E-TNS-PRS,Present Tense,Use present tense in sentences,3,5,1
+E-TNS,E-TNS-PST,Past Tense,Use past tense in sentences,3,6,2
+E-TNS,E-TNS-FUT,Future Tense,Use future tense in sentences,4,7,3
+E-VRB,E-VRB-IDF,Identify Verbs,Recognize verbs in sentences,3,5,1
+E-VRB,E-VRB-USE,Use Verbs,Use verbs correctly in sentences,4,7,2
+E-WRD,E-WRD-FRM,Form Words,Form words from letters,1,2,1
+E-WRD,E-WRD-SPL,Spelling,Spell simple words correctly,1,3,2
+E-WRD,E-WRD-CLF,Classify Words,"Classify nouns, verbs, adjectives",2,4,3
+E-WDC,E-WDC-IDN,Identify Word Classes,"Classify nouns, verbs, adjectives, adverbs",4,6,1
+E-WDC,E-WDC-USE,Use Word Classes,Use correct word class in sentences,5,8,2
+G-CLM,G-CLM-WTH,Weather,Study weather elements and instruments,6,7,1
+G-CLM,G-CLM-CLM,Climate Zones,Identify different climate zones and characteristics,7,9,2
+G-CLM,G-CLM-ATM,Atmospheric Phenomena,"Study winds, storms, rainfall patterns",7,10,3
+G-ENV,G-ENV-POL,Pollution,Types of pollution and effects on environment,7,9,1
+G-ENV,G-ENV-CNS,Conservation,Methods of conserving natural resources and ecosystems,7,10,2
+G-HUM,G-HUM-POP,Population,"Study population distribution, density and growth",6,8,1
+G-HUM,G-HUM-SET,Settlements,Urban and rural settlements and patterns,6,9,2
+G-HUM,G-HUM-MIG,Migration,"Causes, types and effects of migration",7,10,3
+G-HUM,G-HUM-CUL,Culture,"Language, religion, and cultural practices",7,10,4
+G-HUM,G-HUM-RES,Resource Use,Human use and management of resources,7,10,5
+G-PHY,G-PHY-LND,Landforms,"Identify mountains, hills, plains, plateaus and valleys",6,7,1
+G-PHY,G-PHY-RIV,Rivers,"Study major rivers, their sources, courses and uses",6,8,2
+G-PHY,G-PHY-LAK,Lakes & Oceans,"Identify lakes, seas and oceans and their features",6,8,3
+G-PHY,G-PHY-SOL,Soil Types,Identify and classify soil types and uses,7,9,4
+G-PHY,G-PHY-MIN,Minerals,Major minerals and their extraction,7,10,5
+G-REG,G-REG-CNT,Continents,Identify and locate continents and major countries,6,8,1
+G-REG,G-REG-CTR,Countries,"Study countries, capitals and major features",7,10,2
+G-REG,G-REG-REG,Regions,"Study physical, cultural and economic regions",7,10,3
+G-RES,G-RES-NAT,Natural Resources,Identify renewable and non-renewable resources,7,9,1
+G-RES,G-RES-WTR,Water Resources,"Distribution, use and conservation of water",7,10,2
+G-RES,G-RES-ENE,Energy Resources,Sources and uses of energy resources,8,10,3
+H-ANC,H-ANC-HOM,Hominid Study,Understand early humans and their lifestyle,6,6,1
+H-ANC,H-ANC-SET,Settlements,Study early settlements and cities,6,7,2
+H-ANC,H-ANC-CUL,Ancient Culture,"Study art, religion and traditions of ancient civilizations",6,7,3
+H-CUL,H-CUL-ART,Art & Architecture,"Study cultural heritage, monuments and art",6,10,1
+H-CUL,H-CUL-LIT,Literature,Major literary works and authors,7,10,2
+H-CUL,H-CUL-TRD,Traditions,"Festivals, customs and traditional practices",6,10,3
+H-FRE,H-FRE-LDR,Freedom Leaders,Learn about Indian freedom movement leaders,8,9,1
+H-FRE,H-FRE-MVT,Movements,Understand non-violent and armed movements,8,10,2
+H-FRE,H-FRE-EVT,Major Events,Key events leading to independence,8,10,3
+H-MED,H-MED-KIN,Medieval Kingdoms,Identify major kingdoms and dynasties,7,8,1
+H-MED,H-MED-SOC,Medieval Society,Understand social structures and roles,7,8,2
+H-MED,H-MED-CUL,Medieval Culture,"Art, architecture and literature of medieval period",7,8,3
+H-MOD,H-MOD-IND,Industrial Revolution,Study impact of industrialization,8,9,1
+H-MOD,H-MOD-POL,Political Changes,Major political developments in modern period,8,10,2
+H-MOD,H-MOD-SOC,Social Reforms,Social and educational reforms,8,10,3
+H-REV,H-REV-FRE,French Revolution,"Causes, key events and impact",9,10,1
+H-REV,H-REV-IND,Indian Revolutions,Major uprisings in India,9,10,2
+H-WAR,H-WAR-WW1,World War I,"Causes, events and outcomes of World War I",9,10,1
+H-WAR,H-WAR-WW2,World War II,"Causes, events and outcomes of World War II",9,10,2
+K-ALG,K-ALG-FLC,Flowcharts,Draw flowcharts for simple problems,5,7,1
+K-ALG,K-ALG-STR,Algorithm Steps,Define steps to solve simple problems,6,8,2
+K-ALG,K-ALG-PBL,Problem Solving,Apply logical thinking to solve problems,7,10,3
+K-BAS,K-BAS-IDK,Identify Key Parts,"Identify parts of a computer like CPU, monitor, keyboard",1,2,1
+K-BAS,K-BAS-ONF,On/Off Computer,Switch on and off a computer safely,1,2,2
+K-BAS,K-BAS-USE,Use Basic Applications,Open and use simple computer programs,2,3,3
+K-DBS,K-DBS-TBL,Tables,Create and manage tables in a database,6,8,1
+K-DBS,K-DBS-REC,Records,"Insert, update, delete records",6,9,2
+K-DBS,K-DBS-QUE,Queries,Write simple queries to retrieve data,7,10,3
+K-NET,K-NET-IDN,Identify Network Types,"Understand LAN, WAN and internet",6,8,1
+K-NET,K-NET-USE,Use Internet Safely,Browse and use internet applications,6,10,2
+K-NET,K-NET-PRT,Protocols,"Understand basic protocols like HTTP, FTP",7,10,3
+K-OPS,K-OPS-FIL,File Operations,"Create, save, open, and delete files",3,5,1
+K-OPS,K-OPS-MAN,Manage Folders,"Create, rename, move and delete folders",3,5,2
+K-OPS,K-OPS-GUI,GUI Components,"Identify GUI elements like windows, icons, menus",4,6,3
+K-PRE,K-PRE-CRT,Create Slides,Create new slides with titles and content,4,6,1
+K-PRE,K-PRE-FMT,Format Slides,"Apply background, themes, and layouts",4,7,2
+K-PRE,K-PRE-INS,Insert Media,"Insert images, audio, and video into slides",5,8,3
+K-PRE,K-PRE-ANM,Apply Animations,Apply transitions and animations to slides,5,8,4
+K-PRG,K-PRG-VAR,Variables,Understand variables and their use in programs,5,6,1
+K-PRG,K-PRG-LOP,Loops,Write simple loop structures,6,7,2
+K-PRG,K-PRG-CND,Conditional Statements,Use if-else statements in programs,6,8,3
+K-PRG,K-PRG-FNC,Functions,Define and use simple functions,7,10,4
+K-SEC,K-SEC-BSC,Basic Security,Understand importance of passwords and safe browsing,6,8,1
+K-SEC,K-SEC-THR,Identify Threats,"Recognize malware, phishing, and viruses",6,10,2
+K-SEC,K-SEC-PRA,Safe Practices,Follow best practices to protect digital devices,7,10,3
+K-SSS,K-SSS-CRT,Create Spreadsheet,Create spreadsheet and enter data,4,6,1
+K-SSS,K-SSS-FRM,Use Formulas,"Apply basic formulas like sum, average, count",4,8,2
+K-SSS,K-SSS-CHT,Create Charts,"Generate bar, line, and pie charts from data",5,8,3
+K-SSS,K-SSS-SRT,Sort Data,Sort rows and columns based on values,5,8,4
+K-WDP,K-WDP-CRT,Create Document,Create a new word processing document,3,5,1
+K-WDP,K-WDP-EDT,Edit Document,"Edit text, copy, paste and delete content",3,6,2
+K-WDP,K-WDP-FMT,Format Document,"Apply fonts, colors, alignment, bullets, numbering",4,7,3
+K-WDP,K-WDP-INS,Insert Elements,"Insert images, tables, and hyperlinks",4,7,4
+M-ALG,M-ALG-VAR,Identify Variables,Recognize variables in expressions,6,7,1
+M-ALG,M-ALG-EXP,Form Expressions,Form algebraic expressions using variables,6,7,2
+M-ALG,M-ALG-SIM,Simplify Expressions,Simplify given algebraic expressions,7,8,3
+M-ANG,M-ANG-ANG,Identify Angles,"Identify acute, right, obtuse angles",5,6,1
+M-ANG,M-ANG-LIN,Angles with Lines,Understand angles formed by parallel lines,6,8,2
+M-CIR,M-CIR-PAR,Parts of Circle,"Identify radius, diameter, chord",7,8,1
+M-CIR,M-CIR-PRO,Circle Properties,Understand circle properties,8,10,2
+M-CON,M-CON-ANG,Construct Angle Bisector,Construct bisector of given angle,6,7,1
+M-CON,M-CON-TRI,Construct Triangle,Construct triangle with given sides/angles,7,9,2
+M-COO,M-COO-PLT,Plot Points,Plot points on coordinate plane,8,9,1
+M-COO,M-COO-DST,Distance Between Points,Calculate distance between points,9,10,2
+M-DAT,M-DAT-COL,Collect Data,Collect simple data sets,3,5,1
+M-DAT,M-DAT-REP,Data Representation,Draw bar graphs and pictographs,4,7,2
+M-DAT,M-DAT-INT,Interpret Data,Read and interpret graphs,6,8,3
+M-DEC,M-DEC-PVL,Decimal Place Value,Identify decimal place values,4,5,1
+M-DEC,M-DEC-ADD,Add Decimals Same Places,Add decimals with same number of places,5,6,2
+M-DEC,M-DEC-SUB,Subtract Decimals Same Places,Subtract decimals with same number of places,5,6,3
+M-FRA,M-FRA-IDF,Identify Fractions,Recognize fractional part of a whole,3,4,1
+M-FRA,M-FRA-EQF,Equivalent Fractions,Identify fractions equal to given fraction,4,5,2
+M-FRA,M-FRA-ADD,Add Fractions Same Denominator,Add fractions with same denominator,5,6,3
+M-FRA,M-FRA-SUB,Subtract Fractions Same Denominator,Subtract fractions with same denominator,5,6,4
+M-FRA,M-FRA-ADD,Add Fractions Different Denominator,Add fractions with different denominators,6,6,5
+M-FRA,M-FRA-SUB,Subtract Fractions Different Denominator,Subtract fractions with different denominators,6,6,6
+M-GEO,M-GEO-IDN,Identify 2D Shapes,Identify basic 2D shapes,1,2,1
+M-GEO,M-GEO-PRO,Shape Properties,"Identify sides, vertices, and angles",3,5,2
+M-LIN,M-LIN-FRM,Form Linear Equation,Form linear equations from word problems,7,8,1
+M-LIN,M-LIN-SLV,Solve Linear Equation,Solve one-variable linear equations,8,9,2
+M-MEN,M-MEN-PRM,Calculate Perimeter,Find perimeter of given shapes,4,6,1
+M-MEN,M-MEN-ARE,Calculate Area,Find area of 2D shapes,5,8,2
+M-MEN,M-MEN-VOL,Calculate Volume,Find volume of solids,8,10,3
+M-NUM,M-NUM-CT1,Count 1-10,Count numbers from 1 to 10,1,1,1
+M-NUM,M-NUM-CT2,Count 11-100,Count numbers from 11 to 100,1,2,2
+M-NUM,M-NUM-PVL,Place Value,Identify place value of digits,1,3,3
+M-NUM,M-NUM-CMP,Compare Numbers,Compare numbers using symbols,2,4,4
+M-NUM,M-NUM-ODD,Odd Numbers,Identify odd numbers,2,3,5
+M-NUM,M-NUM-EVN,Even Numbers,Identify even numbers,2,3,6
+M-NUM,M-NUM-PRM,Prime Numbers,Identify prime numbers,3,5,7
+M-OPS,M-OPS-ADD,Add Single-digit,Add single-digit numbers,1,2,1
+M-OPS,M-OPS-ADD,Add Double-digit No carry,Add double-digit numbers without carry,2,3,2
+M-OPS,M-OPS-ADC,Add Double-digit With carry,Add double-digit numbers with carry,3,4,3
+M-OPS,M-OPS-SUB,Subtract Single-digit,Subtract single-digit numbers,1,2,4
+M-OPS,M-OPS-SUB,Subtract Double-digit No borrow,Subtract two-digit numbers without borrowing,2,3,5
+M-OPS,M-OPS-SUB,Subtract Double-digit With borrow,Subtract two-digit numbers with borrowing,3,4,6
+M-OPS,M-OPS-MUL,Multiply Single-digit,Multiply single-digit numbers,2,3,7
+M-OPS,M-OPS-MUL,Multiply Double-digit,Multiply double-digit numbers,3,4,8
+M-OPS,M-OPS-DIV,Divide Single-digit,Divide single-digit numbers,3,4,9
+M-OPS,M-OPS-DIV,Divide Double-digit,Divide double-digit numbers,4,5,10
+M-PER,M-PER-CON,Percentage Concept,Understand meaning of percentage,5,6,1
+M-PER,M-PER-CAL,Calculate Percentage,Find percentage of a number,6,7,2
+M-POL,M-POL-IDN,Identify Polynomials,Identify polynomial degree and terms,8,9,1
+M-POL,M-POL-ADD,Add Polynomials,Add two polynomials,9,10,2
+M-POL,M-POL-SUB,Subtract Polynomials,Subtract two polynomials,9,10,3
+M-PRO,M-PRO-CON,Probability Concept,Understand probability of events,8,9,1
+M-PRO,M-PRO-CAL,Probability Calculation,Calculate probability in simple cases,9,10,2
+M-QUA,M-QUA-PRO,Quadrilateral Properties,Identify properties of quadrilaterals,6,8,1
+M-RAT,M-RAT-RAT,Ratio Concept,Understand ratio of two quantities,6,7,1
+M-RAT,M-RAT-PRO,Proportion Calculation,Solve simple proportion problems,7,8,2
+M-STA,M-STA-MEA,Mean Median Mode,"Calculate mean, median and mode",8,10,1
+M-STA,M-STA-GRA,Graphical Representation,Draw and interpret line/bar/pie graphs,8,10,2
+M-TRI,M-TRI-TYP,Classify Triangles by Sides,"Identify equilateral, isosceles, scalene",6,7,1
+M-TRI,M-TRI-ANG,Classify Triangles by Angles,"Identify acute, right, obtuse triangles",6,7,2
+M-TRI,M-TRI-PRO,Triangle Properties,Sum of angles and side rules,7,9,3
+N-COS,N-COS-NEE,Needs & Wants,Distinguish between needs and wants,6,7,1
+N-COS,N-COS-UTI,Utility,Understand utility and satisfaction from consumption,6,8,2
+N-COS,N-COS-PAT,Consumption Patterns,Identify patterns of consumption in households,7,8,3
+N-DEV,N-DEV-GRO,Economic Growth,Explain economic growth indicators like GDP,8,9,1
+N-DEV,N-DEV-IND,Development Indicators,"Understand HDI, literacy rate, life expectancy",8,10,2
+N-DEV,N-DEV-CHL,Development Challenges,Identify challenges to economic development,9,10,3
+N-MKT,N-MKT-DEM,Demand,Understand law of demand and factors affecting demand,7,9,1
+N-MKT,N-MKT-SUP,Supply,Understand law of supply and factors affecting supply,7,9,2
+N-MKT,N-MKT-PRC,Price Determination,Explain how prices are determined in markets,8,10,3
+N-MON,N-MON-MNY,Role of Money,Understand functions and importance of money,7,8,1
+N-MON,N-MON-BNK,Banking System,Learn about banks and their functions,7,9,2
+N-MON,N-MON-FIN,Financial Institutions,Identify types of financial institutions,8,10,3
+N-PRI,N-PRI-FAC,Factors of Production,"Identify land, labor, capital and entrepreneurship",6,7,1
+N-PRI,N-PRI-TYP,Types of Production,"Understand primary, secondary and tertiary production",6,8,2
+N-PRI,N-PRI-PRC,Production Process,Describe production processes in industries,7,8,3
+P-ELE,P-ELE-CUR,Current Calculation,Calculate electric current in a circuit,7,8,1
+P-ELE,P-ELE-VLT,Voltage Calculation,Calculate voltage across circuit elements,7,8,2
+P-ELE,P-ELE-RES,Resistance Calculation,Calculate resistance using Ohm's law,7,9,3
+P-ELE,P-ELE-SER,Series Circuits,Solve problems for series circuits,8,10,4
+P-ELE,P-ELE-PAR,Parallel Circuits,Solve problems for parallel circuits,8,10,5
+P-ENE,P-ENE-KEN,Kinetic Energy,Calculate kinetic energy of objects,6,7,1
+P-ENE,P-ENE-PEN,Potential Energy,Calculate potential energy,6,7,2
+P-ENE,P-ENE-CLP,Energy Conversion,Convert energy from one form to another,7,9,3
+P-ENE,P-ENE-LEN,Law of Energy,Apply law of conservation of energy,7,9,4
+P-FLU,P-FLU-BUY,Buoyancy,Understand buoyant force and floating objects,7,8,1
+P-FLU,P-FLU-ARC,Archimedes Principle,Apply Archimedes principle in problems,7,9,2
+P-FLU,P-FLU-DEN,Density Calculation,Calculate density of liquids and solids,7,9,3
+P-FOR,P-FOR-IDF,Identify Forces,Recognize different types of forces,6,7,1
+P-FOR,P-FOR-ELC,Elastic Force,Understand force in springs and elastic bodies,6,8,2
+P-FOR,P-FOR-GRV,Gravitational Force,Understand gravity and its effects,6,8,3
+P-FOR,P-FOR-FRI,Friction,Understand types of friction and its effects,7,8,4
+P-LIG,P-LIG-RFL,Reflection of Light,Study reflection on plane and curved surfaces,7,8,1
+P-LIG,P-LIG-RFR,Refraction of Light,Understand refraction through lenses and prisms,7,9,2
+P-LIG,P-LIG-IMG,Image Formation,Form images using mirrors and lenses,8,10,3
+P-MAG,P-MAG-IDN,Identify Magnets,Identify types of magnets and poles,7,8,1
+P-MAG,P-MAG-FLD,Magnetic Field,Understand magnetic field lines,7,9,2
+P-MAG,P-MAG-ELE,Electromagnets,Study electromagnets and applications,8,10,3,
+P-MOT,P-MOT-MOT,"Motion","Motion and its characterstics",6,7,1
+P-MOT,P-MOT-TRM,"Translational Motion","Translational Motion",6,7,2
+P-MOT,P-MOT-REM,"Rectilinear Motion","Rectilinear Motion",6,7,3
+P-MOT,P-MOT-CIM,"Circular Motion","Circular Motion",7,8,4
+P-MOT,P-MOT-ROM,"Rotational Motion","Rotational Motion",7,8,5,
+P-MOT,P-MOT-PEM,"Periodic Motion","Periodic Motion",7,8,6,
+P-MOT,P-MOT-OSM,"Oscillatory Motion","Oscillatory Motion",7,8,7,
+P-MOT,P-MOT-RAM,"Random Motion","Random Motion",7,8,8,
+P-MOT,P-MOT-DST,"Distance","Distance",7,8,9,
+P-MOT,P-MOT-DSP,"Displacement","Displacement",7,8,10,
+P-POW,P-POW-CAL,Power Calculation,Calculate power using work and time,7,8,1
+P-POW,P-POW-UIT,Units of Power,Understand units like Watt and Horsepower,7,9,2
+P-PRE,P-PRE-LIQ,Pressure in Liquids,Calculate pressure in liquids,6,7,1
+P-PRE,P-PRE-GAS,Pressure in Gases,Understand and calculate gas pressure,6,8,2
+P-PRE,P-PRE-SOL,Pressure in Solids,Calculate pressure on solids,7,8,3
+P-PRJ,P-PRJ-PAR,Projectile Horizontal,Calculate horizontal motion of projectiles,8,10,1
+P-PRJ,P-PRJ-VER,Projectile Vertical,Calculate vertical motion of projectiles,8,10,2
+P-SOU,P-SOU-PRD,Sound Production,Identify sources of sound and vibration,6,7,1
+P-SOU,P-SOU-PRP,Propagation of Sound,Understand how sound travels through different media,6,7,2
+P-SOU,P-SOU-PIT,Pitch and Frequency,Determine pitch and frequency of sound,7,9,3
+P-SOU,P-SOU-LVL,Loudness and Amplitude,Understand loudness using amplitude,7,9,4
+P-THE,P-THE-HTR,Heat Transfer,"Understand conduction, convection, and radiation",6,8,1
+P-THE,P-THE-TEM,Temperature Measurement,Use thermometer to measure temperature,6,8,2
+P-THE,P-THE-SPE,Specific Heat,Calculate heat using specific heat formula,7,9,3
+P-THE,P-THE-LAT,Latent Heat,Calculate latent heat in phase change,8,10,4
+P-WAV,P-WAV-MEC,Mechanical Waves,Understand characteristics of mechanical waves,6,8,1
+P-WAV,P-WAV-FRQ,Frequency and Wavelength,"Calculate frequency, wavelength and amplitude",7,9,2
+P-WRK,P-WRK-CAL,Work Calculation,Calculate work done by a force,6,7,1
+P-WRK,P-WRK-ANG,Work at Angle,Calculate work when force is applied at angle,7,8,2
+R-CHN,R-CHN-AI,Artificial Intelligence Basics,Introduction to AI concepts and examples,8,10,1
+R-CHN,R-CHN-ROB,Robotics Applications,"Study simple robots, types, and their uses",7,10,2
+R-CHN,R-CHN-REN,Renewable Energy,"Solar, wind, and hydro power basics",7,10,3
+R-CUL,R-CUL-FES,Festivals,Festivals from India and around the world,6,8,1
+R-CUL,R-CUL-ART,Art Forms,"Painting, sculpture, music and dance forms",6,9,2
+R-CUL,R-CUL-LIT,Literature,"Books, authors and literary movements",7,10,3
+R-CUL,R-CUL-HER,Heritage Sites,World and Indian heritage sites,7,10,4
+R-CUR,R-CUR-IND,India Current Events,Important news and developments in India,6,8,1
+R-CUR,R-CUR-GLB,Global Current Events,Major global news and international developments,7,10,2
+R-CUR,R-CUR-AWD,Awards & Achievements,"Recent awards in sports, science, arts, and literature",7,10,3
+R-CUR,R-CUR-ELC,Elections,"Recent elections, winners, and political updates",7,10,4
+R-CUR,R-CUR-TEC,Tech Updates,Latest technology trends and innovations,8,10,5
+R-ENT,R-ENT-MOV,Movies & Cinema,"Famous films, directors, and actors",7,10,1
+R-ENT,R-ENT-MUS,Music & Artists,Popular music genres and artists,6,10,2
+R-ENT,R-ENT-MED,Media Facts,"Television, radio, and digital media knowledge",7,10,3
+R-ENT,R-ENT-POP,Popular Culture,"Trends, games, shows, and social media",7,10,4
+R-ENV,R-ENV-CON,Conservation Projects,"Tree plantation, water conservation, energy saving exercises",7,10,1
+R-ENV,R-ENV-POL,Pollution Experiments,"Observe air, water, and soil pollution",6,9,2
+R-ENV,R-ENV-SUS,Sustainability Exercises,Eco-friendly activities and awareness projects,7,10,3
+R-ENV,R-ENV-CLI,Climate Awareness,Observe and learn about climate change and effects,8,10,4
+R-ENX,R-ENX-POL,Pollution Experiments,Observe air and water pollution in lab or home,7,10,1
+R-ENX,R-ENX-CNS,Conservation Exercises,"Planting trees, energy saving projects",7,10,2
+R-EXP,R-EXP-EX1,Simple Circuits,Build basic electric circuits and observe current flow,6,8,1
+R-EXP,R-EXP-EX2,Water Filtration,Learn water purification techniques and processes,6,9,2
+R-EXP,R-EXP-EX3,Plant Experiments,Observe plant growth under different conditions,7,10,3
+R-GEO,R-GEO-CTR,Countries & Capitals,Identify countries and their capitals globally,6,8,1
+R-GEO,R-GEO-RIV,Rivers & Lakes,"Major rivers, lakes and their locations",6,9,2
+R-GEO,R-GEO-MNT,Mountains & Ranges,"Identify mountains, ranges, and highest peaks",7,10,3
+R-GEO,R-GEO-CLI,Climate & Zones,Climate types and geographical zones,7,10,4
+R-GEO,R-GEO-RES,Resources,Natural resources distribution and uses,7,10,5
+R-HIS,R-HIS-PER,Famous Personalities,"Influential historical leaders, scientists, and reformers",6,8,1
+R-HIS,R-HIS-EVT,Important Events,Key historical events and timelines,6,9,2
+R-HIS,R-HIS-BTL,Major Battles,Significant battles and their outcomes,7,10,3
+R-HIS,R-HIS-MOV,Social Movements,Important social and reform movements,8,10,4
+R-LAW,R-LAW-FND,Fundamental Laws,Basic legal rights and important laws,7,10,1
+R-LAW,R-LAW-JDG,Judiciary,Structure and functions of courts,7,10,2
+R-LAW,R-LAW-CIT,Citizenship Laws,Rights and responsibilities under law,6,10,3
+R-LAW,R-LAW-INT,International Law,Introduction to treaties and global law,8,10,4
+R-LOG,R-LOG-PAT,Patterns,"Number, figure, and sequence patterns",6,8,1
+R-LOG,R-LOG-RES,Reasoning,Logical reasoning problems and exercises,6,9,2
+R-LOG,R-LOG-PUZ,Puzzles,"Word, math, and visual puzzles",7,10,3
+R-LOG,R-LOG-SEQ,Sequences,Identify numerical and alphabetical sequences,7,10,4
+R-LOG,R-LOG-ANA,Analytical Thinking,Analyze situations and solve problems,8,10,5
+R-LTR,R-LTR-FES,World Festivals,Festivals from different countries,6,10,1
+R-LTR,R-LTR-LAN,World Languages,Major languages and origins around the world,7,10,2
+R-LTR,R-LTR-FOD,World Cuisines,Famous dishes from various countries,7,10,3
+R-MAN,R-MAN-INV,Famous Inventions,Discoveries that changed the world,6,9,1
+R-MAN,R-MAN-PER,Notable Personalities,"Influential inventors, leaders, and thinkers",7,10,2
+R-MAN,R-MAN-HIS,Historic Achievements,Significant achievements outside school history syllabus,7,10,3
+R-MAT,R-MAT-TRK,Math Tricks,Quick calculation techniques and shortcuts,6,9,1
+R-MAT,R-MAT-PUZ,Math Puzzles,Logical math problems and brain teasers,6,10,2
+R-MAT,R-MAT-GAM,Math Games,Fun games involving numbers and logic,7,10,3
+R-MAT,R-MAT-SEQ,Sequences & Patterns,Identify and continue number and letter patterns,7,10,4
+R-MAT,R-MAT-APP,Math Applications,Apply math in real-life situations,8,10,5
+R-MED,R-MED-DSC,Medical Discoveries,Important medical inventions and discoveries,7,10,1
+R-MED,R-MED-VAC,Vaccines,Different vaccines and their purpose,6,9,2
+R-MED,R-MED-HYG,Hygiene & Health,Importance of hygiene and healthy practices,6,10,3
+R-MED,R-MED-FIR,First Aid,Basic first aid knowledge for minor injuries,7,10,4
+R-MIN,R-MIN-PUZ,Logic Puzzles,Problem solving with logic and reasoning,6,10,1
+R-MIN,R-MIN-RID,Riddles,Brain riddles and lateral thinking exercises,6,10,2
+R-MIN,R-MIN-MEM,Memory Games,Exercises to enhance memory and concentration,7,10,3
+R-PLA,R-PLA-SOL,Solar System,"Planets, moons, and the Sun",6,9,1
+R-PLA,R-PLA-STR,Stars & Galaxies,"Basic knowledge of stars, constellations, galaxies",7,10,2
+R-PLA,R-PLA-EXP,Space Exploration,"Missions, satellites, and astronauts",8,10,3
+R-SCI,R-SCI-INN,Innovations,Famous inventions and scientific discoveries,6,8,1
+R-SCI,R-SCI-FUN,Science Fundamentals,"Physics, chemistry, and biology facts and principles",6,9,2
+R-SCI,R-SCI-APP,Applied Science,Everyday applications of scientific knowledge,7,10,3
+R-SCI,R-SCI-ENV,Environmental Science,Eco-friendly technologies and discoveries,7,10,4
+R-SPT,R-SPT-OLY,Olympics,"Olympic sports, host cities, and famous athletes",6,10,1
+R-SPT,R-SPT-REC,Records,World and national sports records,7,10,2
+R-SPT,R-SPT-GME,Games Rules,Rules of popular sports and games,6,9,3
+R-SPT,R-SPT-ATH,Athlete Profiles,Famous athletes and their achievements,7,10,4
+R-SPT,R-SPT-OLY,Olympics Trivia,"Facts about Olympic games, cities, and medals",6,10,1
+R-SPT,R-SPT-REC,Sports Records,World and national sports achievements,7,10,2
+R-SPT,R-SPT-ATH,Athlete Profiles,Famous athletes and their achievements,7,10,3
+R-TEC,R-TEC-AI,Artificial Intelligence,Basics of AI and applications in real life,8,10,1
+R-TEC,R-TEC-ROB,Robotics,"Robots in industry, service, and daily life",7,10,2
+R-TEC,R-TEC-SPC,Space Technology,"Satellites, space missions, and discoveries",6,10,3
+R-TEC,R-TEC-GAD,Gadgets & Tech,Famous gadgets and technological devices,7,10,4
+R-TRV,R-TRV-LND,Landmarks,Famous world landmarks and monuments,6,10,1
+R-TRV,R-TRV-CTR,Countries & Capitals,Lesser-known countries and capitals,6,10,2
+R-TRV,R-TRV-CUL,World Cultures,Unique cultural practices worldwide,7,10,3
+R-TRV,R-TRV-TOU,Tourism,Tourist attractions and travel facts,7,10,4
+R-WLD,R-WLD-FAC,World Records,Unique and fun world records,6,10,1
+R-WLD,R-WLD-GEO,Geography Facts,"Interesting facts about countries, oceans, rivers",6,10,2
+R-WLD,R-WLD-TRV,Travel Trivia,Famous travel locations and curiosities,7,10,3
+V-CIT,V-CIT-RGT,Rights of Citizens,Learn about rights granted by the constitution,6,8,1
+V-CIT,V-CIT-RES,Responsibilities,Understand responsibilities of citizens,6,9,2
+V-CIT,V-CIT-PAR,Participation,Ways citizens participate in governance,7,10,3
+V-CNS,V-CNS-FND,Fundamental Rights,Study fundamental rights in the constitution,6,8,1
+V-CNS,V-CNS-RTN,Fundamental Duties,Understand duties of citizens,6,9,2
+V-CNS,V-CNS-LAW,Constitutional Laws,Learn about key constitutional provisions,7,10,3
+V-DEM,V-DEM-PRN,Democracy Principles,Understand key principles of democracy,6,8,1
+V-DEM,V-DEM-TYP,Types of Democracy,Identify direct and representative democracy,6,8,2
+V-DEM,V-DEM-IMP,Importance,Explain importance and benefits of democracy,7,10,3
+V-ELE,V-ELE-PRC,Election Process,Understand the voting process and stages,7,9,1
+V-ELE,V-ELE-SYS,Election Systems,Study different electoral systems,7,10,2
+V-GOV,V-GOV-CEN,Central Government,Structure and functions of central government,6,8,1
+V-GOV,V-GOV-STA,State Government,Structure and functions of state government,6,9,2
+V-GOV,V-GOV-LOC,Local Government,Panchayati Raj and municipal administration,7,10,3
+V-PRI,V-PRI-RLE,Roles of Parties,Understand role and function of political parties,7,9,1
+V-PRI,V-PRI-TYP,Types of Parties,"Identify national, regional and local parties",7,10,2

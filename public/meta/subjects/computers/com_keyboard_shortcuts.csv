@@ -1,0 +1,30 @@
+shortcut,purpose,scope
+Ctrl + C,Copy selected content,Universal
+Ctrl + V,Paste copied or cut content,Universal
+Ctrl + X,Cut selected content,Universal
+Ctrl + Z,Undo last action,Universal
+Ctrl + Y,Redo last undone action,Universal
+Ctrl + A,Select all content,Universal
+Ctrl + F,Find text or objects,Universal
+Ctrl + H,Find and replace text or objects,Universal
+Ctrl + S,Save current file,Universal
+Ctrl + P,Open print dialog,Universal
+Ctrl + N,Create a new file or document,Universal
+Ctrl + O,Open an existing file,Universal
+Ctrl + W,Close current window or file,Universal
+Ctrl + B,Toggle bold formatting,Universal
+Ctrl + I,Toggle italic formatting,Universal
+Ctrl + U,Toggle underline formatting,Universal
+Ctrl + K,Insert or edit hyperlink,Universal
+Ctrl + Shift + Arrow Keys,Expand selection to adjacent content,Universal
+Ctrl + Arrow Keys,"Move quickly through text, cells, or objects",Universal
+Ctrl + Home,Go to start of document or worksheet,Universal
+Ctrl + End,Go to end of document or worksheet,Universal
+Alt + Tab,Switch between open applications,Universal (OS level)
+Ctrl + Tab,Switch between open tabs/documents,Universal
+Ctrl + Shift + Tab,Switch to the previous tab/document,Universal
+Ctrl + Page Up / Page Down,Navigate between sheets or slides or tabs,Universal
+Ctrl + Plus (+),Zoom in or increase size,Universal
+Ctrl + Minus (-),Zoom out or decrease size,Universal
+Ctrl + 0,Reset zoom to default (100%),Universal
+Ctrl + Shift + Esc,Open Task Manager (Windows),Universal (OS level)
