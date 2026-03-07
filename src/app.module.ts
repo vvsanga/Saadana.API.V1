@@ -1,7 +1,8 @@
 import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { PinoLogger } from 'nestjs-pino';
 import { join } from 'path';
 import { CoreModule } from './core/core.module';
 import { RequestContextMiddleware } from './core/middlewares/request-context.middleware';
@@ -19,11 +20,14 @@ import { UsersModule } from './modules/user/users.module';
   imports: [
     // 1. Environmental Configuration with Validation
     ConfigModule.forRoot({
-      isGlobal: true,
-      cache: true,
-      expandVariables: true,
-      envFilePath: join(process.cwd(), 'environments', `.env.${process.env.NODE_ENV || 'development'}`),
-    }),
+  isGlobal: true,
+  // This allows Nest to load the .env file if it exists (local dev),
+  // but it will NOT crash if the file is missing (Docker), 
+  // and it will still pull from process.env (Docker's injected variables).
+  envFilePath: ['.env'], 
+  cache: true,
+  expandVariables: true,
+}),
 
     // 2. Static Files
     ServeStaticModule.forRoot({
@@ -33,8 +37,26 @@ import { UsersModule } from './modules/user/users.module';
 
     // 3. Database with Injected Config
     TypeOrmModule.forRootAsync({
-      useClass: DbConfigService,
-    }),
+  imports: [ConfigModule],
+  inject: [ConfigService, PinoLogger],
+  useFactory: async (configService: ConfigService, pino: PinoLogger) => {
+    // If it's still undefined here, we fallback to the raw process.env
+    const host = configService.get<string>('DB_HOST') || process.env.DB_HOST;
+    
+    if (!host) {
+      throw new Error('❌ CRITICAL: DB_HOST is undefined in both ConfigService and process.env');
+    }
+
+    const dbConfig = new DbConfigService(configService, pino);
+    const options = dbConfig.createTypeOrmOptions();
+    
+    // Explicitly override the host to ensure the value from process.env is used
+    return { ...options, host };
+  },
+}),
+    // TypeOrmModule.forRootAsync({
+    //   useClass: DbConfigService,
+    // }),
 
     // 4. Feature and Infrastructure Modules
     CoreModule,
@@ -61,4 +83,5 @@ export class AppModule implements NestModule {
   }
 }
 
+// envFilePath: join(process.cwd(), 'environments', `.env.${process.env.NODE_ENV || 'development'}`),
 // envFilePath: path.resolve(process.cwd(), 'environments', `.env.${process.env.NODE_ENV || 'development'}`),
