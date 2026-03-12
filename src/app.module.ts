@@ -2,11 +2,11 @@ import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/c
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { PinoLogger } from 'nestjs-pino';
 import { join } from 'path';
 import { CoreModule } from './core/core.module';
 import { RequestContextMiddleware } from './core/middlewares/request-context.middleware';
-import { DbConfigService } from './core/services/db-config.service';
+import { DbFileLogger } from './core/services/db-file.logger';
+import { DbNamingStrategy } from './core/services/db-naming-strategy';
 import { AcademicsModule } from './modules/academic/academics.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { ExamsModule } from './modules/exam/exams.module';
@@ -18,47 +18,86 @@ import { UsersModule } from './modules/user/users.module';
 
 @Module({
   imports: [
-    // 1. Environmental Configuration with Validation
     ConfigModule.forRoot({
-  isGlobal: true,
-  // This allows Nest to load the .env file if it exists (local dev),
-  // but it will NOT crash if the file is missing (Docker), 
-  // and it will still pull from process.env (Docker's injected variables).
-  envFilePath: ['.env'], 
-  cache: true,
-  expandVariables: true,
-}),
+      isGlobal: true,
+      envFilePath: ['.env'],
+      cache: true,
+      expandVariables: true,
+    }),
+    ServeStaticModule.forRoot(
+      {
+        rootPath: join(__dirname, 'assets'),
+        exclude: ['/api/(.*)'],
+      },
+      {
+        rootPath: process.env.META_PATH,
+        serveRoot: '/internal/meta',
+      }
+    ),
 
-    // 2. Static Files
-    ServeStaticModule.forRoot({
-      rootPath: join(process.cwd(), 'public'),
-      exclude: ['/api/(.*)'],
+    // src/app.module.ts
+
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule, CoreModule], // CoreModule MUST be here
+      inject: [ConfigService, DbNamingStrategy, DbFileLogger],
+      useFactory: (
+        config: ConfigService,
+        naming: DbNamingStrategy,
+        dbLogger: DbFileLogger // Injected instance
+      ) => ({
+        type: 'postgres',
+        host: config.get<string>('DB_HOST'),
+        port: config.get<number>('DB_PORT'),
+        username: config.get<string>('DB_USER'),
+        password: config.get<string>('DB_PASS'),
+        database: config.get<string>('DB_NAME'),
+        ssl: { rejectUnauthorized: false },
+
+        autoLoadEntities: true,
+        namingStrategy: naming, // Use the injected naming strategy
+        logger: dbLogger,      // Use the injected logger
+
+        logging: true,
+        synchronize: config.get('NODE_ENV') === 'test',
+      }),
     }),
 
-    // 3. Database with Injected Config
-    TypeOrmModule.forRootAsync({
-  imports: [ConfigModule],
-  inject: [ConfigService, PinoLogger],
-  useFactory: async (configService: ConfigService, pino: PinoLogger) => {
-    // If it's still undefined here, we fallback to the raw process.env
-    const host = configService.get<string>('DB_HOST') || process.env.DB_HOST;
-    
-    if (!host) {
-      throw new Error('❌ CRITICAL: DB_HOST is undefined in both ConfigService and process.env');
-    }
-
-    const dbConfig = new DbConfigService(configService, pino);
-    const options = dbConfig.createTypeOrmOptions();
-    
-    // Explicitly override the host to ensure the value from process.env is used
-    return { ...options, host };
-  },
-}),
     // TypeOrmModule.forRootAsync({
-    //   useClass: DbConfigService,
-    // }),
+    //   imports: [ConfigModule],
+    //   // Combine all injections into one array
+    //   inject: [ConfigService, PinoLogger],
+    //   useFactory: (configService: ConfigService, pino: PinoLogger) => {
+    //     // Define environment variables INSIDE the factory function
+    //     const nodeEnv = configService.get<string>('NODE_ENV') || 'development';
+    //     const isTest = nodeEnv === 'test';
+    //     return {
+    //       type: 'postgres',
+    //       host: configService.get<string>('DB_HOST'),
+    //       port: configService.get<number>('DB_PORT'),
+    //       username: configService.get<string>('DB_USER'),
+    //       password: configService.get<string>('DB_PASS'),
+    //       database: configService.get<string>('DB_NAME'),
+    //       // Managed DBs usually require SSL
+    //       ssl: {
+    //         rejectUnauthorized: false,
+    //       },
 
-    // 4. Feature and Infrastructure Modules
+    //       autoLoadEntities: true,
+    //       namingStrategy: new DbNamingStrategy(),
+
+    //       // Paths relative to the compiled dist folder
+    //       entities: [join(__dirname, '..', '**', '*.entity{.ts,.js}')],
+    //       migrations: [join(__dirname, '..', 'database', 'migrations', '*{.ts,.js}')],
+
+    //       migrationsRun: !isTest,
+    //       migrationsTransactionMode: 'all',
+    //       synchronize: isTest, // Dangerous in production; only use in test/dev
+
+    //       logging: true,
+    //       logger: new DbFileLogger(pino), // Use the injected pino instance here
+    //     };
+    //   },
+    // }),
     CoreModule,
     SecurityModule,
     InfraModule,
@@ -82,6 +121,20 @@ export class AppModule implements NestModule {
       .forRoutes('*');
   }
 }
+
+// TypeOrmModule.forRootAsync({
+//   imports: [ConfigModule],
+//   inject: [ConfigService, PinoLogger],
+//   useFactory: async (configService: ConfigService, pino: PinoLogger) => {
+//     const host = configService.get<string>('DB_HOST') || process.env.DB_HOST;
+//     if (!host) {
+//       throw new Error('❌ CRITICAL: DB_HOST is undefined in both ConfigService and process.env');
+//     }
+//     const dbConfig = new DbConfigService(configService, pino);
+//     const options = dbConfig.createTypeOrmOptions();
+//     return { ...options, host };
+//   },
+// }),
 
 // envFilePath: join(process.cwd(), 'environments', `.env.${process.env.NODE_ENV || 'development'}`),
 // envFilePath: path.resolve(process.cwd(), 'environments', `.env.${process.env.NODE_ENV || 'development'}`),

@@ -1,7 +1,7 @@
 import { config } from 'dotenv';
 import { join } from 'path';
 import { DataSource, DataSourceOptions } from 'typeorm';
-import { SnakeNamingStrategy } from '../core/services/db-naming-strategy';
+import { DbNamingStrategy } from '../core/services/db-naming-strategy';
 
 const nodeEnv = process.env.NODE_ENV || 'development';
 config({ path: join(process.cwd(), 'environments', `.env.${nodeEnv}`) });
@@ -21,7 +21,7 @@ export const getDataSourceOptions = (): DataSourceOptions => {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
-    namingStrategy: new SnakeNamingStrategy(),
+    namingStrategy: new DbNamingStrategy(),
     entities: [
       join(process.cwd(), `${rootDir}/**/*.entity.${fileExt}`),
     ],

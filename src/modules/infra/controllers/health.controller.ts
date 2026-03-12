@@ -5,8 +5,10 @@ import {
   HealthCheckResult,
   HealthCheckService,
   TypeOrmHealthIndicator,
+  DiskHealthIndicator,
 } from '@nestjs/terminus';
 import { PublicRoute } from '../../../core/decorators/auth.decorator';
+import * as fs from 'fs';
 
 @PublicRoute()
 @ApiTags('Api Health')
@@ -25,8 +27,24 @@ export class HealthController {
     ]);
   }
 
-  @Get('live')
+  @Get('status')
   live() {
     return { status: 'ok' };
   }
+
+  // @Get()
+  // @HealthCheck()
+  // check() {
+  //   return this.health.check([
+  //     // Check if the seed directory exists and is readable
+  //     () => ({
+  //       seed_folder: {
+  //         status: fs.existsSync('/app/seed') ? 'up' : 'down',
+  //         fileCount: fs.existsSync('/app/seed') ? fs.readdirSync('/app/seed').length : 0,
+  //       },
+  //     }),
+  //     // Check if the disk has enough space (e.g., more than 5% free)
+  //     () => this.disk.checkStorage('storage', { thresholdPercent: 0.95, path: '/' }),
+  //   ]);
+  // }
 }

@@ -1,44 +1,30 @@
 services:
   api:
-    image: vvsanga/saadana-api:latest
-    build: . 
+    build:
+      context: .
+      # Allows passing version at build time if needed
+      args:
+        - VERSION=${APP_VERSION:-latest}
+    # Uses a variable for the image tag
+    image: ${DOCKER_REGISTRY:-local}/saadana-api:${APP_VERSION:-latest}
     container_name: saadana-api
+    # user: "1000:1000"
     restart: always
-    command: npm run start:prod
-    ports:
-      - "3000:3000"
-    env_file:
-      - .env 
-    healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
+    env_file: .env
+    volumes:
+      # Left side: Host Path | Right side: Container Path
+      - ../saadana-logs/api-logs:/app/logs
+      - ../saadana-data/meta:/app/meta
+      - ../saadana-data/seed:/app/seed
+    labels:
+      - "traefik.enable=true"
+      # Dynamic Host: api.localhost for dev, api.yourdomain.com for prod
+      - "traefik.http.routers.saadana-api.rule=Host(`${API_HOST}`)"
+      - "traefik.http.routers.saadana-api.entrypoints=web"
+      - "traefik.http.services.saadana-api.loadbalancer.server.port=3000"
     networks:
-      - saadana-net
+      - saadana-network
 
 networks:
-  saadana-net:
-    driver: bridge
-
-# services:
-#   api:
-#     image: vvsanga/saadana-api:latest
-#     container_name: saadana-api
-#     restart: always
-#     # While testing WITHOUT Traefik, keep ports enabled:
-#     ports:
-#       - "3000:3000"
-#     env_file:
-#       - .env.prod
-#     healthcheck:
-#       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
-#       interval: 30s
-#       timeout: 10s
-#       retries: 3
-#     networks:
-#       - saadana-net
-
-# networks:
-#   saadana-net:
-#     driver: bridge
+  saadana-network:
+    external: true

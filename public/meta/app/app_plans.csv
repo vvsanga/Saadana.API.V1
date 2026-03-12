@@ -1,7 +1,0 @@
-"node","type","billMode","currency","actualPrice","discountPrice"
-"42","P","M","INR",50,0
-"42","P","Y","INR",600,199
-"43","A","M","INR",2000,999
-"43","A","Y","INR",24000,10999
-"44","E","M","INR",50000,29999
-"44","E","Y","INR",600000,339999

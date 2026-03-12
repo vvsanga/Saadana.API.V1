@@ -3,8 +3,8 @@ import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions, TypeOrmOptionsFactory } from '@nestjs/typeorm';
 import { PinoLogger } from 'nestjs-pino';
 import { join } from 'path';
-import { DbFileLogger } from '../../database/db-file.logger';
-import { SnakeNamingStrategy } from './db-naming-strategy';
+import { DbFileLogger } from './db-file.logger';
+import { DbNamingStrategy } from './db-naming-strategy';
 
 @Injectable()
 export class DbConfigService implements TypeOrmOptionsFactory {
@@ -29,7 +29,7 @@ export class DbConfigService implements TypeOrmOptionsFactory {
 
             // Automatic Entity & Migration Discovery
             autoLoadEntities: true,
-            namingStrategy: new SnakeNamingStrategy(),
+            namingStrategy: new DbNamingStrategy(),
             entities: [join(__dirname, '..', '**', '*.entity{.ts,.js}')],
             migrations: [join(__dirname, '..', 'database', 'migrations', '*{.ts,.js}')],
 
