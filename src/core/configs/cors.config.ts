@@ -8,10 +8,11 @@ export const getCorsOptions = (
   logger: LoggerService
 ): CorsOptions => {
   const envOrigins = configService.get<string>('ALLOWED_ORIGINS') || '';
-  const whitelist = [
-    ...envOrigins.split(',').map((o) => o.trim()),
-    'http://localhost',      // Android
-    'capacitor://localhost', // iOS
+ const whitelist = [
+    ...envOrigins.split(',').map((o) => o.trim()).filter(o => o !== ''),
+    'http://localhost',       // Android Production
+    'http://localhost:8100',  // Ionic/Angular Development
+    'capacitor://localhost',  // iOS Production
   ];
 
   return {
