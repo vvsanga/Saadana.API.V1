@@ -73,6 +73,7 @@ export class AuthAccessController {
     return this.authAccessSvc.refresh();
   }
 
+  @RefreshRoute()
   @Post('logout')
   @SuccessResponseMsg('Logout successful')
   @ApiOperation({ summary: 'Logout user from current device/session' })
@@ -80,6 +81,7 @@ export class AuthAccessController {
     return this.authAccessSvc.logout();
   }
 
+  @RefreshRoute()
   @Post('logout/all')
   @SuccessResponseMsg('Logged out from all devices successfully')
   @ApiOperation({ summary: 'Logout user from all devices/sessions' })
@@ -87,4 +89,3 @@ export class AuthAccessController {
     return this.authAccessSvc.logoutAll();
   }
 }
-

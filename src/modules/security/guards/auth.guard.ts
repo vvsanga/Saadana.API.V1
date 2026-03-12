@@ -41,7 +41,7 @@ export class AuthGuard implements CanActivate {
         }
 
         // 3️⃣ Attach user to request context
-        RequestContext.set({ user });
+        RequestContext.set({ user: user });
         RequestContext.set({ userId: user.id });
 
         // 4️⃣ Internal-only route enforcement
@@ -66,10 +66,7 @@ export class AuthGuard implements CanActivate {
         );
     }
 
-    private async validateJwt(
-        context: ExecutionContext,
-        request: Request,
-    ) {
+    private async validateJwt(context: ExecutionContext, request: Request) {
         // Fix: Explicitly handle string | string[] | undefined
         const rawHeader = request.headers['authorization'];
 

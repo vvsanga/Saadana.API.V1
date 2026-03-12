@@ -1,5 +1,6 @@
 import { Module } from "@nestjs/common";
 import { TypeOrmModule } from "@nestjs/typeorm";
+import { MediaModule } from "../media/media.module";
 import { UsersModule } from "../user/users.module";
 import { AuthAccessController } from "./controllers/auth-access.controller";
 import { AuthVerifyController } from "./controllers/auth-verify.controller";
@@ -15,7 +16,6 @@ import { AuthProviderService } from "./services/auth-provider.service";
 import { OtpPolicyService } from "./services/otp-policy.service";
 import { OtpService } from "./services/otp.service";
 import { TokenService } from "./services/token.service";
-import { MediaModule } from "../media/media.module";
 
 @Module({
     imports: [
@@ -36,8 +36,8 @@ import { MediaModule } from "../media/media.module";
         OtpRepository,
         SessionRepository,
         TokenRepository,
-        AuthAccessService,
         AuthProviderService,
+        AuthAccessService,
         OtpPolicyService,
         OtpService,
         TokenService

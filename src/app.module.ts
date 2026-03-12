@@ -1,4 +1,4 @@
-import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -35,8 +35,6 @@ import { UsersModule } from './modules/user/users.module';
       }
     ),
 
-    // src/app.module.ts
-
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule, CoreModule], // CoreModule MUST be here
       inject: [ConfigService, DbNamingStrategy, DbFileLogger],
@@ -62,42 +60,7 @@ import { UsersModule } from './modules/user/users.module';
       }),
     }),
 
-    // TypeOrmModule.forRootAsync({
-    //   imports: [ConfigModule],
-    //   // Combine all injections into one array
-    //   inject: [ConfigService, PinoLogger],
-    //   useFactory: (configService: ConfigService, pino: PinoLogger) => {
-    //     // Define environment variables INSIDE the factory function
-    //     const nodeEnv = configService.get<string>('NODE_ENV') || 'development';
-    //     const isTest = nodeEnv === 'test';
-    //     return {
-    //       type: 'postgres',
-    //       host: configService.get<string>('DB_HOST'),
-    //       port: configService.get<number>('DB_PORT'),
-    //       username: configService.get<string>('DB_USER'),
-    //       password: configService.get<string>('DB_PASS'),
-    //       database: configService.get<string>('DB_NAME'),
-    //       // Managed DBs usually require SSL
-    //       ssl: {
-    //         rejectUnauthorized: false,
-    //       },
-
-    //       autoLoadEntities: true,
-    //       namingStrategy: new DbNamingStrategy(),
-
-    //       // Paths relative to the compiled dist folder
-    //       entities: [join(__dirname, '..', '**', '*.entity{.ts,.js}')],
-    //       migrations: [join(__dirname, '..', 'database', 'migrations', '*{.ts,.js}')],
-
-    //       migrationsRun: !isTest,
-    //       migrationsTransactionMode: 'all',
-    //       synchronize: isTest, // Dangerous in production; only use in test/dev
-
-    //       logging: true,
-    //       logger: new DbFileLogger(pino), // Use the injected pino instance here
-    //     };
-    //   },
-    // }),
+    // Others
     CoreModule,
     SecurityModule,
     InfraModule,
@@ -113,14 +76,47 @@ export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     consumer
       .apply(RequestContextMiddleware)
-      .exclude(
-        { path: 'health', method: RequestMethod.GET },
-        { path: 'metrics', method: RequestMethod.GET },
-        'auth/(.*)', // Example: exclude auth routes if needed
-      )
       .forRoutes('*');
   }
 }
+
+
+// TypeOrmModule.forRootAsync({
+//   imports: [ConfigModule],
+//   // Combine all injections into one array
+//   inject: [ConfigService, PinoLogger],
+//   useFactory: (configService: ConfigService, pino: PinoLogger) => {
+//     // Define environment variables INSIDE the factory function
+//     const nodeEnv = configService.get<string>('NODE_ENV') || 'development';
+//     const isTest = nodeEnv === 'test';
+//     return {
+//       type: 'postgres',
+//       host: configService.get<string>('DB_HOST'),
+//       port: configService.get<number>('DB_PORT'),
+//       username: configService.get<string>('DB_USER'),
+//       password: configService.get<string>('DB_PASS'),
+//       database: configService.get<string>('DB_NAME'),
+//       // Managed DBs usually require SSL
+//       ssl: {
+//         rejectUnauthorized: false,
+//       },
+
+//       autoLoadEntities: true,
+//       namingStrategy: new DbNamingStrategy(),
+
+//       // Paths relative to the compiled dist folder
+//       entities: [join(__dirname, '..', '**', '*.entity{.ts,.js}')],
+//       migrations: [join(__dirname, '..', 'database', 'migrations', '*{.ts,.js}')],
+
+//       migrationsRun: !isTest,
+//       migrationsTransactionMode: 'all',
+//       synchronize: isTest, // Dangerous in production; only use in test/dev
+
+//       logging: true,
+//       logger: new DbFileLogger(pino), // Use the injected pino instance here
+//     };
+//   },
+// }),
 
 // TypeOrmModule.forRootAsync({
 //   imports: [ConfigModule],

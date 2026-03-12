@@ -32,7 +32,7 @@ export class AuthAccessService {
         private readonly tokenRepo: TokenRepository,
         private readonly tokenSvc: TokenService,
         private readonly sessionRepo: SessionRepository,
-        private readonly providerSvc: AuthProviderService,
+        private readonly authProviderSvc: AuthProviderService,
         private readonly otpSvc: OtpService,
         private readonly emailSvc: IEmailService,
         private readonly smsSvc: ISmsService
@@ -57,8 +57,6 @@ export class AuthAccessService {
         const channel = model.channel === 'email' ? EChannel.EMAIL : EChannel.PHONE;
         const type = EOtpType.LOGIN;
         let user = await this.userRepo.getByChannel(channel, model.identifier, true);
-
-        // const res = await this.userRepo.getByChannel(model.identifier, true);
 
         if (!user) throw new NotFoundException(`User not found with ${model.identifier}`)
 
@@ -98,7 +96,6 @@ export class AuthAccessService {
     async loginWithOtp(model: LoginOtpValidateRequestDto) {
 
         const channel = model.channel === 'email' ? EChannel.EMAIL : EChannel.PHONE;
-        // const type = EOtpType.LOGIN;
         const user = await this.userRepo.getByChannel(channel, model.identifier);
 
         if (!user) throw new NotFoundException(`User not found with ${model.identifier}`);
@@ -128,11 +125,7 @@ export class AuthAccessService {
             model.token,
         );
 
-        let user = await this.userRepo.get({
-            email: profile.email,
-            provider: profile.provider,
-            providerId: profile.providerId,
-        });
+        let user = await this.userRepo.get({ email: profile.email })
 
         user = user
             ? await this.userRepo.update(user, profile)
@@ -143,34 +136,22 @@ export class AuthAccessService {
 
     async refresh() {
         const user = RequestContext?.user;
-        if (!(user && user.id)) throw new UnauthorizedException();
-
+        if (!user || !user.id) throw new UnauthorizedException('User does not exist');
         const token = await this.tokenRepo.findActiveByUser(user.id, ETokenType.REFRESH);
-
-        // (userId, {
-        //     user: true,
-        //     providers: true,
-        //     profiles: true,
-        //     subscriptions: true,
-        // });
-
-        if (!token) throw new UnauthorizedException();
-
+        if (!token) throw new UnauthorizedException('Invalid refresh token');
         return this.loginFlow(user);
     }
 
     async logout() {
         const userId = RequestContext?.userId;
-        if (!userId) throw new UnauthorizedException();
-
+        if (!userId) throw new UnauthorizedException('User does not exist');
         await this.tokenRepo.revokeByUser(userId, ETokenType.REFRESH);
         return true;
     }
 
     async logoutAll() {
         const userId = RequestContext?.userId;
-        if (!userId) throw new UnauthorizedException();
-
+        if (!userId) throw new UnauthorizedException('User does not exist');
         await this.tokenRepo.revokeByUser(userId);
         return true;
     }
@@ -195,11 +176,11 @@ export class AuthAccessService {
     ) {
         switch (provider) {
             case EAuthProvider.GOOGLE:
-                return this.providerSvc.verifyGoogleToken(token);
+                return this.authProviderSvc.verifyGoogleToken(token);
             case EAuthProvider.FACEBOOK:
-                return this.providerSvc.verifyFacebookToken(token);
+                return this.authProviderSvc.verifyFacebookToken(token);
             case EAuthProvider.APPLE:
-                return this.providerSvc.verifyAppleToken(token);
+                return this.authProviderSvc.verifyAppleToken(token);
             default:
                 throw new UnauthorizedException();
         }

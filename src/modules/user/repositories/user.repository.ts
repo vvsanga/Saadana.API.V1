@@ -2,12 +2,12 @@ import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { existsSync } from 'fs';
 import { join } from 'path';
+import { In, Repository } from "typeorm";
 import { ERole } from "../../../core/decorators/roles.decorator";
 import { DownloadFile } from "../../../core/utils/file.util";
+import { GetUid } from "../../../core/utils/uid.util";
 import { EAuthProvider, EChannel } from "../../../modules/auth/constants/auth.enum";
 import { IOAuthProfile } from "../../../modules/auth/models/auth.model";
-import { In, Repository } from "typeorm";
-import { GetUid } from "../../../core/utils/uid.util";
 import { AuthProvider } from "../../auth/entities/auth-provider.entity";
 import { AppUser } from "../entities/app-user.entity";
 
@@ -182,24 +182,90 @@ export class UserRepository {
         });
     }
 
-    async update(user: AppUser, profile: IOAuthProfile): Promise<AppUser> {
-        user.firstName ??= profile.givenName;
-        user.lastName ??= profile.familyName;
-        user.isEmailVerified ||= !!profile.emailVerified;
-        user.isPhoneVerified ||= !!profile.phoneVerified;
-        user.isActive = true;
-        user.role ??= ERole.ADMIN;
+    async update(
+        user: AppUser,
+        profile: IOAuthProfile
+    ): Promise<AppUser> {
+        return this.userRepo.manager.transaction(async (em) => {
 
-        user.avatar = await this.resolveAvatar(
-            profile.picture,
-            user.uid,
-            user.avatar,
-        );
+            /* -----------------------------
+               1. Update user fields
+            ------------------------------*/
+            user.firstName = profile.givenName ?? user.firstName;
+            user.lastName = profile.familyName ?? user.lastName;
+            user.phone = profile.phone ?? user.phone;
 
-        return this.userRepo.save(user);
+            if (profile.emailVerified !== undefined) {
+                user.isEmailVerified = profile.emailVerified;
+            }
+
+            if (profile.picture) {
+                user.avatar = await this.resolveAvatar(profile.picture, user.uid);
+            }
+
+            const savedUser = await em.save(AppUser, user);
+
+            /* -----------------------------
+               2. Check provider
+            ------------------------------*/
+            const existingProvider = await em.findOne(AuthProvider, {
+                where: {
+                    provider: profile.provider,
+                    user: { id: savedUser.id }
+                }
+            });
+
+            if (existingProvider) {
+
+                /* -----------------------------
+                   3. Update provider if needed
+                ------------------------------*/
+                if (profile.providerId &&
+                    existingProvider.providerId !== profile.providerId) {
+
+                    existingProvider.providerId = profile.providerId;
+                    await em.save(AuthProvider, existingProvider);
+                }
+
+            } else {
+
+                /* -----------------------------
+                   4. Insert provider
+                ------------------------------*/
+                const provider = em.create(AuthProvider, {
+                    provider: profile.provider ?? EAuthProvider.INTERNAL,
+                    providerId: profile.providerId ?? user.uid,
+                    user: savedUser
+                });
+
+                await em.save(AuthProvider, provider);
+
+                if (!savedUser.providers) savedUser.providers = [];
+                savedUser.providers.push(provider);
+            }
+
+            return savedUser;
+        });
     }
 
     async insert(data: Partial<AppUser>) {
         return this.userRepo.save(this.userRepo.create(data));
     }
 }
+
+// async update(user: AppUser, profile: IOAuthProfile): Promise<AppUser> {
+//     user.firstName ??= profile.givenName;
+//     user.lastName ??= profile.familyName;
+//     user.isEmailVerified ||= !!profile.emailVerified;
+//     user.isPhoneVerified ||= !!profile.phoneVerified;
+//     user.isActive = true;
+//     user.role ??= ERole.ADMIN;
+
+//     user.avatar = await this.resolveAvatar(
+//         profile.picture,
+//         user.uid,
+//         user.avatar,
+//     );
+
+//     return this.userRepo.save(user);
+// }

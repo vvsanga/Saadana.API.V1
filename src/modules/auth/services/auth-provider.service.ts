@@ -6,39 +6,39 @@ import { IOAuthProfile } from '../models/auth.model';
 
 @Injectable()
 export class AuthProviderService {
-  private googleClient = new OAuth2Client(C_AUTH.OAUTH.CLIENT_ID.GOOGLE);
+    private client = new OAuth2Client(C_AUTH.OAUTH.CLIENT_ID.GOOGLE);
 
-  async verifyGoogleToken(accessToken: string): Promise<IOAuthProfile> {
-    const ticket = await this.googleClient.verifyIdToken({
-      idToken: accessToken,
-      audience: C_AUTH.OAUTH.CLIENT_ID.GOOGLE,
-    });
+    async verifyGoogleToken(token: string): Promise<IOAuthProfile> {
 
-    const payload = ticket.getPayload();
-    if (!payload) throw new UnauthorizedException('Invalid Google token');
+        const ticket = await this.client.verifyIdToken({
+            idToken: token,
+            audience: C_AUTH.OAUTH.CLIENT_ID.GOOGLE
+        });
 
-    return {
-      provider: EAuthProvider.GOOGLE,
-      providerId: payload['sub'] ?? '',
-      email: payload['email'] ?? '',
-      emailVerified: payload['email_verified'] ?? false,
-      givenName: payload['given_name'] ?? undefined,
-      familyName: payload['family_name'] ?? undefined,
-      name: payload['name'] ?? undefined,
-      picture: payload['picture'] ?? undefined,
-      locale: payload['locale'] ?? undefined,
-    };
-  }
+        const payload = ticket.getPayload();
 
-  async verifyFacebookToken(accessToken: string): Promise<IOAuthProfile> {
-    // Example: call Facebook Graph API /debug_token and /me endpoints
-    // Replace with axios/fetch in real app
-    throw new UnauthorizedException('Facebook verification not implemented yet');
-  }
+        return {
+            provider: EAuthProvider.GOOGLE,
+            providerId: payload?.sub,
+            email: payload?.email,
+            name: payload?.name,
+            familyName: payload?.family_name,
+            givenName: payload?.given_name,
+            picture: payload?.picture,
+            emailVerified: payload?.email_verified,
+            locale: payload?.locale
+        };
+    }
 
-  async verifyAppleToken(accessToken: string): Promise<IOAuthProfile> {
-    // Example: validate JWT signature against Apple public keys
-    // Parse claims (sub, email, etc.)
-    throw new UnauthorizedException('Apple verification not implemented yet');
-  }
+    async verifyFacebookToken(token: string): Promise<IOAuthProfile> {
+        // Example: call Facebook Graph API /debug_token and /me endpoints
+        // Replace with axios/fetch in real app
+        throw new UnauthorizedException('Facebook verification not implemented yet');
+    }
+
+    async verifyAppleToken(token: string): Promise<IOAuthProfile> {
+        // Example: validate JWT signature against Apple public keys
+        // Parse claims (sub, email, etc.)
+        throw new UnauthorizedException('Apple verification not implemented yet');
+    }
 }
