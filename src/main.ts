@@ -1,4 +1,3 @@
-import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { Logger } from 'nestjs-pino';
 import { AppModule } from './app.module';
@@ -11,11 +10,11 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, { bufferLogs: true });
 
   const logger = app.get(LoggerService);
-  const config = app.get(ConfigService);
+  // const config = app.get(ConfigService);
 
   app.useLogger(app.get(Logger));
   app.enableShutdownHooks();
-  app.enableCors(getCorsOptions(config, logger));
+  app.enableCors(getCorsOptions(logger));
 
   if (process.env.SWAGGER_FOR_PROD === 'true' || process.env.NODE_ENV !== 'production') {
     setupSwagger(app);
