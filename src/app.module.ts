@@ -36,12 +36,12 @@ import { UsersModule } from './modules/user/users.module';
     ),
 
     TypeOrmModule.forRootAsync({
-      imports: [ConfigModule, CoreModule], // CoreModule MUST be here
+      imports: [ConfigModule, CoreModule],
       inject: [ConfigService, DbNamingStrategy, DbFileLogger],
       useFactory: (
         config: ConfigService,
         naming: DbNamingStrategy,
-        dbLogger: DbFileLogger // Injected instance
+        dbLogger: DbFileLogger
       ) => ({
         type: 'postgres',
         host: config.get<string>('DB_HOST'),
@@ -49,14 +49,20 @@ import { UsersModule } from './modules/user/users.module';
         username: config.get<string>('DB_USER'),
         password: config.get<string>('DB_PASS'),
         database: config.get<string>('DB_NAME'),
-        ssl: config.get('NODE_ENV') === 'prod' ? { rejectUnauthorized: false } : false,
+
+        // CHANGE THIS: Disable SSL for your internal VPS network
+        ssl: false,
 
         autoLoadEntities: true,
-        namingStrategy: naming, // Use the injected naming strategy
-        logger: dbLogger,      // Use the injected logger
-
+        namingStrategy: naming,
+        logger: dbLogger,
         logging: true,
         synchronize: config.get('NODE_ENV') === 'test',
+
+        // ADD THIS: Force the underlying driver to ignore SSL
+        extra: {
+          ssl: false,
+        },
       }),
     }),
 
