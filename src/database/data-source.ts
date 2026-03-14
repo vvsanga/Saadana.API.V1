@@ -4,7 +4,7 @@ import { DataSource, DataSourceOptions } from 'typeorm';
 import { DbNamingStrategy } from '../core/services/db-naming-strategy';
 
 const nodeEnv = process.env.NODE_ENV || 'development';
-config({ path: join(process.cwd(), 'environments', `.env.${nodeEnv}`) });
+config({ path: join(process.cwd(), `.env.${nodeEnv}`) });
 
 export const getDataSourceOptions = (): DataSourceOptions => {
   const isProd = nodeEnv === 'production';
@@ -16,11 +16,11 @@ export const getDataSourceOptions = (): DataSourceOptions => {
 
   return {
     type: 'postgres',
-    host: process.env.DB_HOST,
+    host: process.env.DB_HOST || 'db.leoora.org',
     port: parseInt(process.env.DB_PORT || '5432', 10),
-    username: process.env.DB_USER,
-    password: process.env.DB_PASS,
-    database: process.env.DB_NAME,
+    username: process.env.DB_USER || 'saadana_db_user',
+    password: String(process.env.DB_PASS || 'Civic#2020'),
+    database: process.env.DB_NAME || 'saadana_db_dev',
     namingStrategy: new DbNamingStrategy(),
     entities: [
       join(process.cwd(), `${rootDir}/**/*.entity.${fileExt}`),
@@ -32,9 +32,11 @@ export const getDataSourceOptions = (): DataSourceOptions => {
     migrationsRun: !isTest,
     migrationsTransactionMode: 'all',
     logging: !isProd ? ['query', 'error', 'schema'] : ['error'],
-    ssl: {
-      rejectUnauthorized: false,
-    },
+
+    // --- UPDATE THIS SECTION ---
+    // Disable SSL for development/local Docker setups
+    ssl: isProd ? { rejectUnauthorized: false } : false,
+
     extra: {
       max: 20,
     },
@@ -44,6 +46,3 @@ export const getDataSourceOptions = (): DataSourceOptions => {
 const dataSource = new DataSource(getDataSourceOptions());
 export default dataSource;
 
-// ssl: isProd
-//   ? { rejectUnauthorized: false }
-//   : false,

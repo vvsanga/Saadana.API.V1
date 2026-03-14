@@ -1,3 +1,6 @@
+import { AcdContentDiagram } from "../modules/academic/entities/content-diagram.entity";
+import { AcdContent } from "../modules/academic/entities/content.entity";
+import { AcdDiagram } from "../modules/academic/entities/diagram.entity";
 import { AcdSyllabus } from "../modules/academic/entities/syllabus.entity";
 import { AppNode } from "../modules/infra/entities/app-node.entity";
 import { AppPlan } from "../modules/infra/entities/app-plan.entity";
@@ -13,17 +16,17 @@ export interface SeedTask {
 
 export const SeedRegistry: SeedTask[] = [
     {
-        name: 'AppClients',
+        name: 'clients',
         entity: AppClient,
-        file: 'app/app_clients.csv',
+        file: 'app/clients.csv',
         transform: (row) => ({
             ...row
         }),
     },
     {
-        name: 'AppNodes',
+        name: 'nodes',
         entity: AppNode,
-        file: 'app/app_nodes.csv',
+        file: 'app/nodes.csv',
         transform: (row, map) => {
             // Helper to safely parse the meta string
             const parseMeta = (val: string) => {
@@ -50,22 +53,22 @@ export const SeedRegistry: SeedTask[] = [
         }
     },
     {
-        name: 'AppPlans',
+        name: 'plans',
         entity: AppPlan,
-        file: 'app/app_plans.csv',
+        file: 'app/plans.csv',
         transform: (row, lookupMap) => ({
             ...row,
             // node: { id: lookupMap.get(row.node) },
         }),
     },
     {
-        name: 'Subjects',
+        name: 'subjects',
         entity: AcdSyllabus,
         file: 'app/syllabus/subjects.csv',
-        level: 0,
+        level: 1,
         transform: (row) => ({
             ...row,
-            level: 0,
+            level: 1,
             parent: null,
             gradeFrom: parseInt(row.gradeFrom),
             gradeTo: parseInt(row.gradeTo),
@@ -73,23 +76,9 @@ export const SeedRegistry: SeedTask[] = [
         }),
     },
     {
-        name: 'Units',
+        name: 'units',
         entity: AcdSyllabus,
         file: 'app/syllabus/units.csv',
-        level: 1,
-        transform: (row, lookupMap) => ({
-            ...row,
-            level: 1,
-            parent: { id: lookupMap.get(row.parent) },
-            gradeFrom: parseInt(row.gradeFrom),
-            gradeTo: parseInt(row.gradeTo),
-            order: parseInt(row.order),
-        }),
-    },
-    {
-        name: 'Topics',
-        entity: AcdSyllabus,
-        file: 'app/syllabus/topics.csv',
         level: 2,
         transform: (row, lookupMap) => ({
             ...row,
@@ -100,4 +89,42 @@ export const SeedRegistry: SeedTask[] = [
             order: parseInt(row.order),
         }),
     },
+    {
+        name: 'topics',
+        entity: AcdSyllabus,
+        file: 'app/syllabus/topics.csv',
+        level: 3,
+        transform: (row, lookupMap) => ({
+            ...row,
+            level: 3,
+            parent: { id: lookupMap.get(row.parent) },
+            gradeFrom: parseInt(row.gradeFrom),
+            gradeTo: parseInt(row.gradeTo),
+            order: parseInt(row.order),
+        }),
+    },
+    {
+        name: 'diagrams',
+        entity: AcdDiagram,
+        file: 'academic/diagrams.csv',
+        transform: (row) => ({
+            ...row
+        }),
+    },
+    {
+        name: 'content',
+        entity: AcdContent,
+        file: 'academic/content.csv',
+        transform: (row) => ({
+            ...row
+        }),
+    },
+    {
+        name: 'content-diagrams',
+        entity: AcdContentDiagram,
+        file: 'academic/content-diagrams.csv',
+        transform: (row) => ({
+            ...row
+        }),
+    }
 ];

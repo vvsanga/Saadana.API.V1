@@ -46,7 +46,7 @@ export class AuthGuard implements CanActivate {
 
         // 4️⃣ Internal-only route enforcement
         if (this.isInternalRoute(context) && !user.isInternal) {
-            throw new ForbiddenException('Internal access only');
+            throw new ForbiddenException('You have no access'); // Internal access only
         }
 
         return true;

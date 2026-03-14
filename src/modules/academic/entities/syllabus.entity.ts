@@ -15,10 +15,10 @@ export class AcdSyllabus extends BaseCreateEntity {
     @Column({ type: 'varchar', length: 50, nullable: false })
     label!: string;
 
-    @Column({ type: 'smallint', nullable: false })
+    @Column({ type: 'smallint', default: 1 })
     gradeFrom!: number;
 
-    @Column({ type: 'smallint', nullable: false })
+    @Column({ type: 'smallint', default: 10 })
     gradeTo!: number;
 
     @Column({ type: 'smallint', nullable: false })

@@ -45,9 +45,10 @@ export class DbConfigService implements TypeOrmOptionsFactory {
             logger: new DbFileLogger(this.pino),
             // ----------------------------------
 
-            ssl: {
-                rejectUnauthorized: false,
-            },
+            // ssl: {
+            //     rejectUnauthorized: false,
+            // },
+            ssl: isProd ? { rejectUnauthorized: false } : false,
 
             // Connection Pool & Timeouts
             connectTimeoutMS: 10000,

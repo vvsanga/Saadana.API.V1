@@ -47,7 +47,7 @@ async function bootstrap() {
 
         console.log('✅ Seeding completed successfully.');
     } catch (error: any) {
-        console.error('❌ Seeding failed:', error.message || error);
+        console.error('❌ Seeding failed:', error);
         process.exit(1);
     } finally {
         await app.close();

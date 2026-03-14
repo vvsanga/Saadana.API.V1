@@ -49,7 +49,7 @@ import { UsersModule } from './modules/user/users.module';
         username: config.get<string>('DB_USER'),
         password: config.get<string>('DB_PASS'),
         database: config.get<string>('DB_NAME'),
-        ssl: { rejectUnauthorized: false },
+        ssl: config.get('NODE_ENV') === 'prod' ? { rejectUnauthorized: false } : false,
 
         autoLoadEntities: true,
         namingStrategy: naming, // Use the injected naming strategy
