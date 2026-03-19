@@ -3,7 +3,6 @@ import { IsPhoneNumber, IsString, MaxLength } from 'class-validator';
 import { BaseEmailDto } from '../../../core/base/dtos/base-mail.dto';
 import { BaseUidDto } from '../../../core/base/dtos/base-uid.dto';
 import { BaseUpdateDto } from '../../../core/base/dtos/base-update.dto';
-import { ERole } from '../../../core/decorators/roles.decorator';
 import { EnumUtil } from '../../../core/utils/enum.util';
 import { EAuthProvider } from '../../../modules/auth/constants/auth.enum';
 import { LoginPasswordRequestDto } from '../../../modules/auth/dtos/auth-access.dto';
@@ -35,7 +34,7 @@ class UserCore {
 
 class UserCoreDto extends UserCore {
 
-  @ApiProperty() isInternal?: boolean;
+  // @ApiProperty() isInternal?: boolean;
   @ApiProperty() isEmailVerified?: boolean;
   @ApiProperty() isPhoneVerified?: boolean;
   @ApiProperty() passwordChangedAt?: Date;
@@ -48,11 +47,11 @@ class UserCoreDto extends UserCore {
     this.lastName = entity.lastName;
     this.avatar = entity.avatar;
     this.phone = entity.phone;
-    this.isInternal = entity.isInternal;
+    // this.isInternal = entity.isInternal;
     this.isEmailVerified = entity.isEmailVerified;
     this.isPhoneVerified = entity.isPhoneVerified;
     this.passwordChangedAt = entity.passwordChangedAt;
-    this.role = entity.role ? EnumUtil.getKey(ERole, entity.role) : undefined;
+    this.role = entity.isInternal ? entity.role.toString() : undefined;
   }
 }
 

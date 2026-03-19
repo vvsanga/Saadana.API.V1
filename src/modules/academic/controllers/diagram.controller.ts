@@ -5,7 +5,9 @@ import { ApiCrud } from '../../../core/decorators/api-crud.decorator';
 import { AcdDiagramCreateDto, AcdDiagramDto, AcdDiagramUpdateDto } from '../dtos/diagram.dto';
 import { AcdDiagram } from '../entities/diagram.entity';
 import { AcdDiagramService } from '../services/diagram.service';
+import { InternalRoute } from 'src/core/decorators/auth.decorator';
 
+@InternalRoute()
 @ApiTags('Academic Diagrams')
 @Controller('academic/diagrams')
 @ApiCrud(AcdDiagramCreateDto, AcdDiagramUpdateDto, AcdDiagramDto)

@@ -51,7 +51,8 @@ import { UsersModule } from './modules/user/users.module';
         database: config.get<string>('DB_NAME'),
 
         // CHANGE THIS: Disable SSL for your internal VPS network
-        ssl: false,
+        // ssl: false,
+        ssl: config.get('NODE_ENV') === 'production' ? { rejectUnauthorized: false } : false,
 
         autoLoadEntities: true,
         namingStrategy: naming,
@@ -60,9 +61,9 @@ import { UsersModule } from './modules/user/users.module';
         synchronize: config.get('NODE_ENV') === 'test',
 
         // ADD THIS: Force the underlying driver to ignore SSL
-        extra: {
-          ssl: false,
-        },
+        // extra: {
+        //   ssl: false,
+        // },
       }),
     }),
 

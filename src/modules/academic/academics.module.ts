@@ -3,7 +3,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { AcdContentController } from "./controllers/content.controller";
 import { AcdDiagramController } from "./controllers/diagram.controller";
 import { AcdSyllabusController } from "./controllers/syllabus.controller";
-import { AcdTopicContentController } from "./controllers/topic-content.controller";
+import { AcdTopicContentController } from "../infra/controllers/topic-content.controller";
 import { AcdComparisonItem } from "./entities/comparison-item.entity";
 import { AcdComparison } from "./entities/comparison.entity";
 import { AcdContentComparison } from "./entities/content-comparison.entity";

@@ -1,11 +1,13 @@
 import { Controller } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
+import { InternalRoute } from 'src/core/decorators/auth.decorator';
 import { BaseCrudController } from '../../../core/base/controllers/base-crud.controller';
 import { ApiCrud } from '../../../core/decorators/api-crud.decorator';
 import { AcdSyllabusCreateDto, AcdSyllabusDto, AcdSyllabusUpdateDto } from '../dtos/syllabus.dto';
 import { AcdSyllabus } from '../entities/syllabus.entity';
 import { AcdSyllabusService } from '../services/syllabus.service';
 
+@InternalRoute()
 @ApiTags('Academic Syllabus')
 @Controller('academic/syllabus')
 @ApiCrud(AcdSyllabusCreateDto, AcdSyllabusUpdateDto, AcdSyllabusDto)

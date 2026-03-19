@@ -6,7 +6,9 @@ import { AcdContentCreateDto, AcdContentDto, AcdContentUpdateDto } from "../dtos
 import { AcdContent } from "../entities/content.entity";
 import { AcdSyllabus } from "../entities/syllabus.entity";
 import { AcdContentService } from "../services/content.service";
+import { InternalRoute } from "src/core/decorators/auth.decorator";
 
+@InternalRoute()
 @ApiTags('Academic Content')
 @Controller('academic/content/topic/:parentUid')
 @ApiCrud(AcdContentCreateDto, AcdContentUpdateDto, AcdContentDto)
