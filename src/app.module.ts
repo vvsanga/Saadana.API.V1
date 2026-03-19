@@ -52,7 +52,7 @@ import { UsersModule } from './modules/user/users.module';
 
         // CHANGE THIS: Disable SSL for your internal VPS network
         // ssl: false,
-        ssl: config.get('NODE_ENV') === 'production' ? { rejectUnauthorized: false } : false,
+        ssl: config.get('NODE_ENV') === 'development' ? { rejectUnauthorized: false } : false,
 
         autoLoadEntities: true,
         namingStrategy: naming,
